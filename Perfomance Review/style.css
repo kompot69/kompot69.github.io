@@ -1,0 +1,132 @@
+body {
+  background-color: rgb(57, 57, 58);
+  background-image: url(img/bg1.jpeg);
+  background-size: 150%;
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  padding-bottom: 150px;
+  color: white;
+}
+.db-buttons {
+  display: none;
+}
+.header {
+  background-color: rgba(99, 176, 205, 0.5);
+  width: 100%;
+  height: 60px;
+}
+.container {
+  width: 90%;
+  max-width: 940px;
+  margin: auto;
+}
+.title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 35px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.subtitle {
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+  margin-top: 0;
+}
+.table-line-top {
+  width: 800px;
+  height: 30px;
+  border: solid 4px #63b0cd;
+  border-radius: 30px;
+  margin: auto;
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: flex;
+}
+.db-buttons-t {
+  width: 75px;
+}
+.blocks {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.date,
+.status {
+  width: 20%;
+  text-align: center;
+  padding-top: 7px;
+}
+.teamliad,
+.project-name {
+  width: 30%;
+  text-align: center;
+  padding-top: 7px;
+}
+.date,
+.teamliad,
+.project-name {
+  border-right: solid 1px #63b0cd;
+}
+.table-line {
+  width: 800px;
+  height: 30px;
+  border: solid 2px #63b0cd;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+}
+
+.edit {
+  width: 20px;
+  height: 100%;
+  border-right: solid 1px#63b0cd;
+  padding-right: 5px;
+}
+.delete {
+  width: 25px;
+  height: 25px;
+}
+.control-buttons {
+  margin: auto;
+  width: 80px;
+  margin-top: 50px;
+}
+.add {
+  width: 25px;
+  height: 25px;
+  border: solid 1px #63b0cd;
+  border-radius: 15px;
+  padding: 5px;
+}
+.settings {
+  width: 25px;
+  height: 25px;
+  border: solid 1px #63b0cd;
+  border-radius: 15px;
+  padding: 5px;
+}
+.db-buttons {
+  display: flex;
+  margin-left: auto;
+  border: 2px solid#63b0cd;
+  border-radius: 15px;
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
+@media (max-width: 899px) {
+  .table-line,
+  .table-line-top {
+    width: 100%;
+  }
+}
+@media (max-width: 699px) {
+  .title {
+    font-size: 20px;
+  }
+  .subtitle {
+    font-size: 30px;
+  }
+}

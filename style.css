@@ -1,0 +1,113 @@
+body {
+  background-color: rgb(10, 10, 10);
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  margin-top: 50px;
+}
+.sub,
+.subb {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.img-git {
+  height: 42px;
+  border-radius: 50px 50px 50px 50px;
+  background-color: white;
+}
+
+.img-tg {
+  height: 41px;
+  border-radius: 50px 50px 50px 50px;
+  background-color: white;
+}
+.logo-container,
+.logo-containerb {
+  border: 2px solid white;
+  border-right: none;
+  border-radius: 50px 00px 00px 50px;
+  height: 42px;
+}
+.navigation-link-autor,
+.navigation-link-git {
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-weight: 700;
+  padding-right: 14px;
+  border: 2px solid white;
+  border-left: none;
+  border-radius: 0px 50px 50px 0px;
+  color: rgb(255, 255, 255);
+}
+.container {
+  display: block;
+  margin: auto;
+  max-width: 55%;
+  margin-top: 50px;
+}
+.project-link-devs,
+.project-link-nh,
+.project-link-spacex,
+.project-link-scarysite {
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  margin: auto;
+
+  font-weight: 700;
+}
+.link-container {
+  margin-bottom: 30px;
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+.status {
+  font-size: 12px;
+  margin-top: 0;
+}
+@media (max-width: 699px) {
+  .status {
+    font-size: 10px;
+  }
+  .container {
+    max-width: 80%;
+    margin-top: 35px;
+  }
+  .project-link-devs,
+  .project-link-nh,
+  .project-link-spacex,
+  .project-link-scarysite {
+    font-size: 18px;
+  }
+  .img-tg,
+  .logo-container {
+    height: 30px;
+  }
+  .img-git,
+  .logo-containerb {
+    height: 20px;
+  }
+  .navigation-link-autor {
+    font-size: 15px;
+    padding-left: 6px;
+    padding-top: 8px;
+    padding-right: 10px;
+  }
+  .navigation-link-git {
+    font-size: 10px;
+    padding-left: 3px;
+    padding-top: 5px;
+    padding-right: 6px;
+  }
+  body {
+    margin-top: 20px;
+  }
+  .link-container {
+    margin-bottom: 20px;
+  }
+}
