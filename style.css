@@ -49,39 +49,55 @@ body {
   max-width: 55%;
   margin-top: 50px;
 }
-.project-link-devs,
-.project-link-nh,
-.project-link-spacex,
-.project-link-scarysite {
+.title {
   text-decoration: none;
   font-size: 25px;
   color: rgb(255, 255, 255);
-  margin: auto;
-
   font-weight: 700;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 5px 15px 5px 15px;
+  margin-bottom: 10px;
+}
+.block {
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+.subtitle {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  border-bottom: 1px solid white;
+  padding: 7px 10px 7px 10px;
+  margin-bottom: 5px;
 }
 .link-container {
   margin-bottom: 30px;
-  display: block;
-  justify-content: center;
   text-align: center;
 }
-.status {
-  font-size: 12px;
-  margin-top: 0;
+.sublink {
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin: 5px;
+}
+.line {
+  width: 30px;
+  margin: auto;
+  border-bottom: 1px dotted white;
 }
 @media (max-width: 699px) {
-  .status {
-    font-size: 10px;
-  }
   .container {
     max-width: 80%;
     margin-top: 35px;
   }
-  .project-link-devs,
-  .project-link-nh,
-  .project-link-spacex,
-  .project-link-scarysite {
+  .title {
     font-size: 18px;
   }
   .img-tg,
