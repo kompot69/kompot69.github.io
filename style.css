@@ -47,7 +47,17 @@ body {
   display: block;
   margin: auto;
   max-width: 55%;
-  margin-top: 50px;
+  margin-top: 10px;
+}
+.help {
+  display: flex;
+  justify-content: center;
+}
+.red {
+  color: rgb(255, 124, 124);
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px dotted white;
 }
 .title {
   text-decoration: none;
@@ -55,18 +65,20 @@ body {
   color: rgb(255, 255, 255);
   font-weight: 700;
   border: 1px solid white;
-  border-radius: 50px;
+  border-radius: 17px 17px 0px 0px;
   padding: 5px 15px 5px 15px;
-  margin-bottom: 10px;
 }
 .block {
-  display: inline-block;
+  display: block;
   border: 1px solid white;
   border-radius: 15px;
-  margin-top: 20px;
+  margin-top: 5px;
   padding-bottom: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .subtitle {
+  width: 90%;
   display: inline-block;
   text-decoration: none;
   font-size: 15px;
@@ -76,15 +88,33 @@ body {
   padding: 7px 10px 7px 10px;
   margin-bottom: 5px;
 }
+.n-subtitle {
+  width: 90%;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(255, 124, 124);
+  font-weight: 700;
+  border-bottom: 1px solid white;
+  padding: 7px 10px 7px 10px;
+  margin-bottom: 5px;
+}
 .link-container {
-  margin-bottom: 30px;
   text-align: center;
+  margin-top: 35px;
 }
 .sublink {
   display: block;
   font-size: 15px;
   text-decoration: none;
   color: rgb(255, 255, 255);
+  margin: 5px;
+}
+.n-sublink {
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(255, 124, 124);
   margin: 5px;
 }
 .line {
