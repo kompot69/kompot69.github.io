@@ -54,7 +54,7 @@ body {
   justify-content: center;
 }
 .red {
-  color: rgb(255, 124, 124);
+  color: rgb(156, 68, 68);
   margin-left: 10px;
   padding-left: 10px;
   border-left: 1px dotted white;
@@ -68,20 +68,29 @@ body {
   border-radius: 17px 17px 0px 0px;
   padding: 5px 15px 5px 15px;
 }
-.block {
+.top-block {
   display: block;
   border: 1px solid white;
   border-radius: 15px;
   margin-top: 5px;
+  padding-bottom: 10px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.block {
+  display: block;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin-top: 20px;
   padding-bottom: 5px;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 .subtitle {
   width: 90%;
   display: inline-block;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 17px;
   color: rgb(255, 255, 255);
   font-weight: 700;
   border-bottom: 1px solid white;
@@ -93,7 +102,7 @@ body {
   display: inline-block;
   text-decoration: none;
   font-size: 15px;
-  color: rgb(255, 124, 124);
+  color: rgb(158, 83, 83);
   font-weight: 700;
   border-bottom: 1px solid white;
   padding: 7px 10px 7px 10px;
@@ -107,14 +116,14 @@ body {
   display: block;
   font-size: 15px;
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: rgb(185, 185, 185);
   margin: 5px;
 }
 .n-sublink {
   display: block;
   font-size: 15px;
   text-decoration: none;
-  color: rgb(255, 124, 124);
+  color: rgb(110, 59, 59);
   margin: 5px;
 }
 .line {
