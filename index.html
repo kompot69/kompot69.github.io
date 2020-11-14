@@ -1,92 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en"></html>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet" />
-    <title>gr_69's projects</title>
-    <link rel="stylesheet" href="stiles/normalize.css" />
+    <title>Kompot</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="logo.ico" type="image/jpg" />
-  </head>
-
-  <body>
-    <header class="header">
-      <div class="sub">
-        <div class="logo-container">
-          <a href="https://t.me/gr_69" class="link"><img src="img/tg.svg" alt="" class="img-tg" /></a>
-        </div>
-        <a href="https://t.me/gr_69" class="navigation-link-autor">Гречка</a>
-      </div>
-      <div class="subb">
-        <div class="logo-containerb">
-          <a href="https://github.com/gr69?tab=repositories" class="link"><img src="img/git.svg" alt="" class="img-git" /></a>
-        </div>
-        <a href="https://github.com/gr69?tab=repositories" class="navigation-link-git">gr69</a>
-      </div>
-    </header>
-    <div class="container">
-      <div class="help">
-        <p class="white">готово</p>
-        <p class="red">не готово</p>
-      </div>
-      <div class="link-container">
-        <a href="#" class="title">Анкета Performance Review</a>
-        <div class="top-block">
-          <a href="https://www.figma.com/file/3dRugNR2AEfclFZRzLOG2m/PR-From" class="sublink">посмотреть макет</a>
-          <a href="s/PR (From).fig" class="sublink">скачать макет (.fig)</a>
-          <a href="#" class="n-sublink">посмотреть на сайте</a>
-        </div>
-      </div>
-      <div class="link-container">
-        <a href="#" class="title">Анкета Self Review</a>
-        <div class="top-block">
-          <a href="https://www.figma.com/file/aMPvUqhHuePVuwuldNhjnQ/SR-From" class="sublink">посмотреть макет</a>
-          <a href="s/SR (From).fig" class="sublink">скачать макет (.fig)</a>
-          <a href="#" class="n-sublink">посмотреть на сайте</a>
-        </div>
-      </div>
-      <div class="link-container">
-        <a href="#" class="title">Performance Review</a>
-        <div class="top-block">
-          <a href="#" class="subtitle">результаты (главная)</a
-          ><a href="https://www.figma.com/file/GJ3uUzlF8JLV8M9yPQX4Ys/PR-Results" class="sublink">посмотреть макет</a>
-          <a href="s/PR Results.fig" class="sublink">скачать макет (.fig)</a>
-          <a href="Perfomance Review" class="sublink">посмотреть на сайте</a>
-          <a href="s/pr-rezults.7z" class="sublink">скачать сурсы сайта (.7z)</a>
-          <div class="block">
-            <a href="#" class="subtitle">создание</a>
-            <a href="https://www.figma.com/file/kiIWtyZqyoeaAjTF7BJu9M/PR-Create" class="sublink">посмотреть макет</a>
-            <a href="s/PR Create.fig" class="sublink">скачать макет (.fig)</a>
-            <a href="#" class="n-sublink">посмотреть на сайте</a>
-          </div>
-          <div class="block">
-            <a href="#" class="subtitle">просмотр и редактирование</a>
-            <a href="https://www.figma.com/file/L6rdOZtZzH5czuHzdX1GLc/PR-ViewEdit" class="sublink">посмотреть макет</a>
-            <a href="s/PR ViewEdit.fig" class="sublink">скачать макет (.fig)</a>
-            <a href="#" class="n-sublink">посмотреть на сайте</a>
-
-            <div class="block">
-              <input type="checkbox" id="hd-1" class="hide" />
-              <label for="hd-1" class="subsubtitle">просмотр и редактирование (отдельно)</label>
-              <div>
-                <div class="block">
-                  <a href="#" class="subtitle">редактирование</a>
-                  <a href="https://www.figma.com/file/VC4kRxO5k7xhlkfUemq5K3/PR-Edit" class="sublink">посмотреть макет</a>
-                  <a href="s/PR Edit.fig" class="sublink">скачать макет (.fig)</a>
-                  <a href="#" class="n-sublink">посмотреть на сайте</a>
-                </div>
-                <div class="block">
-                  <a href="#" class="subtitle">просмотр</a>
-                  <a href="https://www.figma.com/file/fBgW2W304Ht5qu0qZgcS52/PR-View" class="sublink">посмотреть макет</a>
-                  <a href="s/PR View.fig" class="sublink">скачать макет (.fig)</a>
-                  <a href="#" class="n-sublink">посмотреть на сайте</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+</head>
+<body>
+    <div class="block">
+        <input class="input" id="input1">
+        <button class="but-a" onclick="Add();">
+            Добавить
+        </button>
     </div>
-  </body>
-</html>
+    <div class="block">
+        <select class="select" id=list></select>
+        <button class="but-d" onclick="Delete();">
+            Удалить
+        </button>
+    </div>
+    <div class="block">
+        <button class="but-sa" onclick="ShowAll();">
+            Показать все
+        </button>
+    </div>
+
+
+    <script> 
+      let mas=[];
+	  let exceptions = ['Lada'];
+
+      let Add = function() {
+	  let emt = document.getElementById('input1').value;
+		
+		if (exceptions.indexOf(emt) === -1) {
+			mas.push(emt);
+			renderSelect();
+            alert("добавлено");
+		}
+	};
+    
+	let ShowAll = function() {
+		mas.forEach(emt => {
+			alert(emt);
+		});
+	};
+
+    let renderSelect = function () {
+		let select = document.getElementById('list');
+		
+		select.options.length = 0;
+		
+		mas.forEach(emt => {
+			let option = document.createElement('option');
+			option.innerText = emt;
+			select.add(option);
+		});
+	};
+
+    let Delete = function() {
+		let emt = document.getElementById('list').value;
+	
+		let emtIndex = mas.indexOf(emt);
+		
+		if (emtIndex !== -1) {
+			mas.splice(emtIndex, 1);			
+			alert("Удалено");
+		} else {
+			alert("Незвестный элемент");
+		}
+		
+		renderSelect();
+	};
+
+    </script>
+</body>
