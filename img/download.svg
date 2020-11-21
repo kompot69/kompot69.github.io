@@ -1,11 +1,9 @@
-<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-
- <g>
-  <title>background</title>
-  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
- </g>
- <g>
-  <title fill="#cccccc">Layer 1</title>
-  <path fill="#cccccc" id="svg_1" d="m19.8,10.1c-0.9,-3.5 -4,-6.1 -7.8,-6.1c-3,0 -5.6,1.6 -7,4.1c-2.8,0.5 -5,2.9 -5,5.9c0,3.3 2.7,6 6,6c1,0 11.9,0 13,0c2.8,0 5,-2.2 5,-5c0,-2.5 -1.8,-4.6 -4.2,-4.9zm-9.8,2.9l0,-4l4,0l0,4l3,0l-5,5l-5,-5l3,0z"/>
- </g>
-</svg>
+<?xml version="1.0" ?><svg data-name="Layer 53" id="Layer_53" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style></defs><title/><circle class="cls-1" cx="32" cy="32" r="30"/><g><polyline class="cls-1" points="13.96 39.27 13.96 48.84 50.04 48.84 50.04 39.27"/><polyline class="cls-1" points="21.18 29.52 32.04 40.38 42.82 29.61"/><line class="cls-1" x1="32" x2="32" y1="40.38" y2="15.16"/></g></svg>
