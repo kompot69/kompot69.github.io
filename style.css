@@ -7,6 +7,14 @@ body {
     margin-left: 5%;
     margin-right: 5%;
   }
+.gitlogo, .downloadlogo{
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    margin-right: 5px;
+}
 .input{
     background-color: rgb(10, 10, 10);
     color: rgb(255, 255, 255);
