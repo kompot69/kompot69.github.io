@@ -1,81 +1,61 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet" />
-    <title>Kompot</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>gr_69's projects</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <a href="https://github.com/gr69/gr69.github.io" class="gitlink"><img src="img/git.svg" alt="gihub" class="gitlogo" /></a>
-    <a href="https://github.com/gr69/gr69.github.io/archive/master.zip" class="download"><img src="img/download.svg" alt="download" class="downloadlogo" /></a>
-    <div class="block">
-        <input class="input" id="input1">
-        <button class="but-a" onclick="Add();">
-            Добавить
-        </button>
+    <link rel="shortcut icon" href="logo.ico" type="image/jpg" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="sub">
+        <div class="logo-container">
+          <a href="https://t.me/gr_69" class="link"
+            ><img src="tg.svg" alt="" class="img-tg"
+          /></a>
+        </div>
+
+        <a href="https://t.me/gr_69" class="navigation-link-autor">Гречка</a>
+      </div>
+      <div class="subb">
+        <div class="logo-containerb">
+          <a href="https://github.com/gr69?tab=repositories" class="link"
+            ><img src="git.svg" alt="" class="img-git"
+          /></a>
+        </div>
+
+        <a
+          href="https://github.com/gr69?tab=repositories"
+          class="navigation-link-git"
+          >gr69</a
+        >
+      </div>
+    </header>
+    <div class="container">
+      <div class="link-container">
+        <a href="https://kali-nh.github.io" class="project-link-nh"
+          >NetHunter For You</a
+        >
+        <p class="status">развивается</p>
+      </div>
+      <div class="link-container">
+        <a href="/ScarySite" class="project-link-scarysite">ScarySite</a>
+        <p class="status">заброшен</p>
+      </div>
+      <div class="link-container">
+        <a href="/SpaceX" class="project-link-spacex">SpaceX</a>
+        <p class="status">разрабатывается</p>
+      </div>
+      <div class="link-container">
+        <a href="/Devs" class="project-link-devs">Devs</a>
+        <p class="status">заброшен</p>
+      </div>
     </div>
-    <div class="block">
-        <select class="select" id=list></select>
-        <button class="but-d" onclick="Delete();">
-            Удалить
-        </button>
-    </div>
-    <div class="block">
-        <button class="but-sa" onclick="ShowAll();">
-            Показать все
-        </button>
-    </div>
-
-
-    <script> 
-      let mas=[];
-	  let exceptions = ['исключение'];
-
-      let Add = function() {
-	  let emt = document.getElementById('input1').value;
-		
-		if (exceptions.indexOf(emt) === -1) {
-			mas.push(emt);
-			renderSelect();
-            alert("добавлено");
-            document.getElementById("input1").value = "";
-		}
-	};
-    
-	let ShowAll = function() {
-		mas.forEach(emt => {
-			alert(emt);
-		});
-	};
-
-    let renderSelect = function () {
-		let select = document.getElementById('list');
-		
-		select.options.length = 0;
-		
-		mas.forEach(emt => {
-			let option = document.createElement('option');
-			option.innerText = emt;
-			select.add(option);
-		});
-	};
-
-    let Delete = function() {
-		let emt = document.getElementById('list').value;
-	
-		let emtIndex = mas.indexOf(emt);
-		
-		if (emtIndex !== -1) {
-			mas.splice(emtIndex, 1);			
-			alert("Удалено");
-		} else {
-			alert("Незвестный элемент");
-		}
-		
-		renderSelect();
-	};
-
-    </script>
-</body>
+  </body>
+</html>
