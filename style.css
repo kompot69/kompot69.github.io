@@ -30,7 +30,6 @@ body {
   text-shadow: 0px 0px 4px rgb(255 255 255);
   -webkit-transition: all 500ms;
   transition: all 500ms;
-  transform: scale(1.5s);
 }
 .block_container{
   display: flex;
@@ -38,6 +37,8 @@ body {
   padding: 10px;
 }
 .block{
+  min-width: 25px;
+  min-height: 25px;
   display: block;
   margin: 18px;
   padding: 18px;
@@ -51,7 +52,7 @@ body {
   box-shadow:  7px 7px 9px #333333, -7px -7px 9px #474747;
   -webkit-transition: all 500ms;
   transition: all 500ms;
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 .my_pic{
   height: 100px;
@@ -59,8 +60,22 @@ body {
   margin-right: 20px;
 }
 .block_contact_link{
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
   text-decoration: none;
+  color: rgb(255, 255, 255);
+  border: solid 1px rgba(97, 97, 97, 0);
+  padding: 5px;
+  margin: 1px;
+}
+.block_contact_link:hover{
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  text-shadow: 0px 0px 7px aqua;
   color: aqua;
+  border-right: solid 1px aqua;  
+  border-left: solid 1px aqua;  
+  border-radius: 15px;
 }
 .block_title{
   margin: auto;
