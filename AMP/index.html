@@ -15,7 +15,7 @@
       <input type="checkbox" id="toggle-button" class="toggle-button" onchange="fun1()">
     </header>
     <div class="container">
-      <p class="mooveright"><</p>
+      <h3 class="section_name">Графика</h3>
       <div class="photoscontainer">
         <div class="photocontainer">
           <img src="photos/0.jpg" alt="" class="photo">
@@ -53,30 +53,17 @@
       
     </div>
     <script>
-      function fun0() {
-        var photo = document.getElementsByClassName('photo');
-          if (photo.oncick) {
-            photo[0].style.with = '20px';
-          }
-          else {
-          }
-        }
       function fun1() {
         var chbox;
         var colorArray = document.getElementsByClassName('body');
-        var colorArray2 = document.getElementsByClassName('mooveright');
         chbox=document.getElementById('toggle-button');
           if (chbox.checked) {
             colorArray[0].style.backgroundColor = '#222222';
             colorArray[0].style.color = '#8400ff'
-            colorArray2[0].style.backgroundColor = '#8400ff99';
-            colorArray2[0].style.color = '#000000'
           }
           else {
             colorArray[0].style.backgroundColor = '#c6e2ff';
             colorArray[0].style.color = '#000000'
-            colorArray2[0].style.backgroundColor = '#00000099';
-            colorArray2[0].style.color = '#ffffff'
           }
         }
     </script>
