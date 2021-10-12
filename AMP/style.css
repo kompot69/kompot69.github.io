@@ -144,6 +144,7 @@ body {
 @media (max-width: 550px) {
   .photoscontainer{
     justify-content: center;
+    padding-bottom: 15px;
   }
   .photocontainer{
     height: 350px;
