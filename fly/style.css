@@ -17,6 +17,23 @@ body {
   margin-top: 8px;
   margin-left: 10px;
 }
+.pagename:hover::after{
+  opacity: 100;
+}
+.pagename::after{
+  content: "";
+  width: 45px;
+  height: 45px;
+  top: 20px;
+  left: 67px;
+  position: absolute;
+  background-repeat: repeat-x;
+  background-image: url(poop.png);
+  background-size: 15px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+}
 .themecontainer::before{
   content: "";
   position: absolute;
@@ -24,7 +41,8 @@ body {
   background-repeat: no-repeat;
   width: 45px;
   height: 45px;
-  background-image: url(theme.png);
+  background-image: url(poop.png);
+  background-size: 45px;
   -webkit-transition: all 500ms;
   transition: all 500ms;
 }
@@ -117,8 +135,17 @@ body {
 .section_name:hover{
   content: none;
   color: aqua;
-  transform: rotate(500deg) scaleY(5) scaleX(2);
+  transform: rotate(500deg) scaleY(5) scaleX(2) translateX(100px);
   background-color: rgb(255, 0, 0);
+  font-weight: 500;
+}
+.section_name:hover::before{
+  content: "блять ";
+  font-weight: 100;
+}
+.section_name:hover::after{
+  content: " ахуеть";
+  font-weight: 900;
 }
 .photoscontainer{
   display: block;
@@ -139,5 +166,92 @@ body {
   transition: all 2s;
 }
 .hel2:hover{
-  transform: rotate(20000000deg) scaleY(7) scaleX(2);
+  transform: rotate(20000000deg) scaleY(2) scaleX(5);
+}
+.planecontainer::before{
+  font-weight: normal;
+  content: "вернули";
+  position: absolute;
+  color: #00000000;
+  margin-top: 4px;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+.planecontainer{
+  background-color: rgb(255, 0, 0);
+  width: 50px;
+  height: 25px;
+  font-weight: 900;
+  font-size: 16px;
+  position:absolute;
+  padding-left: 10px;
+  z-index: 2;
+  margin-top: 20px;
+  border-radius: 0px 15px 15px 0px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.planecontainer p{
+  margin: 5px;
+  color: #000000;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+.planecontainer:hover{
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 15px red;
+  width: 80px;
+  height: 70px;
+}
+.planecontainer:hover p{
+  transform: rotate(1250deg) translateX(120px);
+}
+.planecontainer:hover::before{
+  content: "спиздили";
+  color: #000000;
+  border-bottom: 1px dotted red;
+  padding-bottom: 3px;
+}
+.planecontainer:after{
+  content: "запускаю хуелёт...";
+  color: #00000000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-weight: normal;
+}
+.planecontainer:hover::after{
+  color: #ff0000;
+  font-weight: 500;
+}
+.pl{
+  background-image: url(plane.png);
+  background-size: cover;
+  height: 200px;
+  width: 430px;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  z-index: 1;
+}
+.planecontainer:hover ~ .pl{
+  margin-left: 900px;
+  border-radius: 100% 30% 100% 100%;
+  height: 170px;
+  box-shadow: inset 0px 0px 25px royalblue;
+  transform: rotateY(660deg) rotate(360deg) translateY(-220px) skew(180deg);
+}
+.pl::after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-image: url(poop.png);
+  background-size: 50px;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+  opacity: 0;
+}
+.planecontainer:hover ~ .pl::after{
+  width: 400px;
+  transform: translateY(500px) rotateX(300deg);
+  opacity: 100;
 }
