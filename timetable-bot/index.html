@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet" />
-  <title>Timetable UBot</title>
+  <title>Timetable Bot</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="shortcut icon" href="/timetable-bot/icon.ico" type="image/jpg" />
 </head>
@@ -14,18 +14,26 @@
   <header class="header">
     <div class="header-left">
       <img src="/timetable-bot/logo.png" alt="logo" class="logo" />
-      <a href="https://kompot69.github.io/timetable-bot" class="site-name">Timetable VK UBot</a>
+      <a href="https://kompot69.github.io/timetable-bot" class="site-name">Timetable VK Bot</a>
     </div>
     <nav class="navigation">
       <nav class="tgandpda">
+        <div class="dropdown">
+          <button class="dropbtn"><img src="vk.png" alt="" class="vkimg"></button>
+          <div class="dropdown-content">
+            <a href="https://vk.com/app6441755_-208671433?ref=group_menu" class="navigation-link-dropdown">Добавить в беседу</a>
+            <a href="https://vk.com/ptpit_timetable" class="navigation-link-dropdown">Перейти в группу</a>
+            <a href="https://vk.com/im?sel=472153219" class="navigation-link-dropdown">Написать админу</a>
+          </div>
+        </div>
         <a href="download/" class="navigation-link">Скачать</a>
-     </nav>
+      </nav>
     </nav>
   </header>
   <div class="onsite-navigation">
   </div>
   <div class="container">
-    <h1 class="title">Юзербот для ВК для получения расписания с сайта ПТПИТ</h1>
+    <h1 class="title">Бот для ВК для получения расписания с сайта ПТПИТ</h1>
     <h2 class="subtitle2">Что умеет? / Какие команды есть?</h2>
     <h3 class="subtitle3">Команды получения расписания:</h3>
     <div class="description">
@@ -37,7 +45,8 @@
         <p>
           Покажет расписание на выбранный день, если это суббота - покажет на понедельник. <br>
           Пример: Пары на завтра <br>
-          Пример: Расписание сегодня
+          Пример: Расписание сегодня <br>
+          Не используйте сочетание "Распиание на"!
         </p>
       </div>
       <div class="command">
@@ -92,8 +101,15 @@
         <p>Выход из бота для последующего его запуска контроллером.</p>
       </div>
     </div>
-    <h2 class="subtitle2">Установка</h2>
-    <a href="download">скачать</a>
+    <h2 class="subtitle2">Установка (Linux)</h2>
+      <h3>1. <a href="download">Скачать</a> python-бота</h3>
+      <h3>2. Установить необходимые python-пакеты:</h3> 
+      <ul>
+        <li>bs4</li>
+        <li>requests</li>
+        <li>vk_api</li>
+      </ul>
+      <h3>3. Запустить botController.py и следовать инструкциям в терминале</h3> 
     <h2 class="subtitle2">Контакты / Разработчики</h2>
     <div class="contacts">
       <div>
