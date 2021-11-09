@@ -18,7 +18,7 @@ body {
   margin: auto;
   padding-right: 100px;
 }
-.site_nav_button{
+.site_nav_button, .site_nav_button_b{
   color: rgb(255, 255, 255);
   text-decoration: none;  
   font-size: 15px;
@@ -26,7 +26,10 @@ body {
   -webkit-transition: all 500ms;
   transition: all 500ms;
 }
-.site_nav_button:hover{
+.site_nav_button_b{
+  color: rgba(255, 255, 255, 0.5);
+}
+.site_nav_button:hover,.site_nav_button_b:hover{
   text-shadow: 0px 0px 4px rgb(255 255 255);
   -webkit-transition: all 500ms;
   transition: all 500ms;
@@ -103,7 +106,7 @@ body {
     text-align: center;
     margin-top: 5px;
   }
-  .site_nav_button{
+  .site_nav_button,.site_nav_button_b{
     margin: 12px;
   }
 }
