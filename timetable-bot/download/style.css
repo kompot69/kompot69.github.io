@@ -219,6 +219,12 @@ body {
     .header-left {
       justify-content: center;
     }
+    .logo{
+      margin-left: 0;
+    }
+    .site-name{
+      margin: 10px;
+    }
     .navigation {
       display: none;
     }
@@ -235,6 +241,9 @@ body {
       text-align: center;
       margin: 10px 0px 5px 0px;
     }
+    .kernel-right::-webkit-scrollbar {
+       width: 0px;
+     }
     .kernel-right {
       border-top: 1px solid rgb(78, 78, 78);
       display: flex;
@@ -245,25 +254,37 @@ body {
     }
     .kernel-right {
       width: auto;
-      height: 20px;
+      height: 25px;
       max-height: 180px;
       overflow: auto; 
-      display: none;
+      display: block;
+      padding: 0;
     }
     .kernel-right:hover {
       margin: 0;
-      padding-top: 10px;
       width: auto;
       height: 100%;
       max-height: 180px;
       overflow: auto; 
     }
+    .kernel-right:hover::-webkit-scrollbar {
+       width: 6px;
+     }
+    .kernel-right:hover h3{
+      margin: 10px 15px;
+      font-weight: 400;
+      font-size: 18px;
+      width: 150px;
+    }
     .kernel-right h3{
-      text-align: center;
+      width: 100px;
+      font-size: 15px;
+      margin: 5px auto;
+      font-weight: 100;
       transform: rotate(0deg) translateX(0px) translateY(0px);
-      color: rgb(125, 255, 255);
     }
     .kernel-right p{
+      margin: 15px;
       opacity: 100;
       height: auto;
       overflow:hidden;
