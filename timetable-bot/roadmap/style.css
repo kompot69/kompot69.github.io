@@ -97,7 +97,6 @@ body {
     margin: auto;
     width: 70%;
     padding-bottom: 50px;
-    padding-top: 20px;
   }
   .vkimg {
     width: 35px;
@@ -163,25 +162,46 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.container h3, .container h2{
+.container a{
+  color: #ffffff;
+}
+.container p{
+  text-align: center;
+  margin: 40px auto;
+}
+.container h3, .container h2, .container h1{
   font-weight: 400;
   font-size: 20px;
   display: flex;
 }
-.container h3::before, .container h2::before{
+.container h3::before, .container h2::before, .container h1::before{
   content: " ";
   text-align: center;
   margin-right: 10px;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   border-radius: 20px;
 }
+.container h3{
+  font-weight: 100;
+}
+.container h1::before{
+  width: 35px;
+  content: "bug";
+  font-size: 16px;
+  padding: 0 5px;
+  color: red;
+  border: 2px solid red;
+}
 .container h2::before{
+  content: "-";
+  font-size: 16px;
   color: gray;
   border: 2px solid gray;
 }
 .container h3::before{
   content: "+";
+  font-size: 16px;
   color: aqua;
   border: 2px solid aqua;
 }
