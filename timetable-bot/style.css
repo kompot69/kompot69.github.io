@@ -235,6 +235,12 @@ body {
     .header-left {
       justify-content: center;
     }
+    .logo{
+      margin-left: 0;
+    }
+    .site-name{
+      margin: 10px;
+    }
     .navigation {
       justify-content: center;
     }
