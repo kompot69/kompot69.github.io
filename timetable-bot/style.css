@@ -225,7 +225,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  @media (max-width: 750px) {
+  @media (max-width: 900px) {
     body::-webkit-scrollbar {
       width: 5px;
     }
