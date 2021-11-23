@@ -15,6 +15,9 @@ body {
     background-color: rgba(180, 180, 180, 0.5);
     border-radius: 5px;
   }
+  p{
+    color: gray;
+  }
   a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     color: white;
@@ -178,9 +181,6 @@ body {
     margin-left: 10px;
     border-left: 2px solid aqua;
     padding-left: 10px;
-  }
-  .description p{
-    color: gray;
   }
   .command h3{
     margin: 0;
