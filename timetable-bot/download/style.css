@@ -197,7 +197,7 @@ body {
     padding-top: 5px;
     width: 1150px;
     min-height: 100%;
-    max-height: 180px;
+    max-height: 165px;
     overflow: auto; 
   }
   .kernel-right:hover h3{
