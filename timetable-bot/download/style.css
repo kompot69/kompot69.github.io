@@ -227,7 +227,8 @@ body {
   text-decoration: none;
   text-align: center;
   color: #ffffff;
-  width: 100px;
+  width: 40px;
+  margin-right: 30px;
   font-size: 17px;
   font-weight: 500;
 }
