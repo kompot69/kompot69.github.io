@@ -18,6 +18,9 @@ body {
   a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+  button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
   .header {
     display: flex;
     justify-content: space-between;
@@ -99,6 +102,56 @@ body {
     padding-bottom: 50px;
     padding-top: 20px;
   }
+  
+
+.onsite-navigation {
+  background-image: -webkit-linear-gradient(top, black, rgb(43, 40, 40));
+  height: 15px;
+}
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 1500px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.tabs {
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.tabs button {
+  background-color: inherit;
+  width: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-family: "Comfortaa", cursive;
+  border-radius: 5px 5px 0px 0px;
+  transition: 300ms;
+  color: rgb(240, 240, 240);
+}
+.tabs button:hover {
+  text-shadow: 0px 0px 4px rgb(255, 255, 255);
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.tabs button.active {
+  background-color: rgb(20, 20, 20);
+  color: #fff;
+  font-weight: 900;
+}
+.tablinks {
+  outline: none;
+}
+.tabcontent {
+  border-top: 2px solid rgb(0, 0, 0);
+}
   .kernel-block {
     -webkit-transition: all 350ms;
     transition: all 350ms;
@@ -216,22 +269,22 @@ body {
     transition: all 500ms;  
     padding: 0 2px;
   }
-/* Dropdown Button */
-.dropbtn {
-  background-color: rgba(255, 255, 255, 0);
-  border: none;
-  padding-bottom: 10px;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  padding-top: 10px;
-  text-decoration: none;
-  text-align: center;
-  color: #ffffff;
-  width: 40px;
-  margin-right: 30px;
-  font-size: 17px;
-  font-weight: 500;
-}
+  /* Dropdown Button */
+  .dropbtn {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding-bottom: 10px;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    padding-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    width: 40px;
+    margin-right: 30px;
+    font-size: 17px;
+    font-weight: 500;
+  }
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
