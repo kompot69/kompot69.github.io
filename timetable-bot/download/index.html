@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="dropbtn"><img src="/timetable-bot/tg.png" alt="tg" class="vkimg"></button>
+          <button class="dropbtn"><img src="tg.png" alt="tg" class="vkimg"></button>
           <div class="dropdown-content">
             <a href="https://t.me/ptpit_timetable_bot" class="navigation-link-dropdown">Открыть бота</a>
             <a href="https://t.me/kompot_69" class="navigation-link-dropdown">Написать админу</a>
@@ -42,9 +42,14 @@
   <div class="onsite-navigation">
   </div>
   <div class="container">
+    <div class="tabs">
+      <button class="tablinks" onclick="openTab(event, 'vkver')" id="defaultOpen">ВКонтакте</button>
+      <button class="tablinks" onclick="openTab(event, 'tgver')">Telegram</button>
+    </div>
+    <div id="vkver" class="tabcontent">
     <div class="kernel-block">
       <div class="kernel">
-        <div class="version">v.0.5 Beta</div>
+        <div class="version">v.0.5 Group Beta</div>
         <div class="conVersion">
             <ul>
                 <li>? ? ?</li>
@@ -67,7 +72,7 @@
     <div class="kernel-block">
       <div class="kernel">
         <div class="lastest"></div>
-        <div class="version">v.0.4 VK Group Beta</div>
+        <div class="version">v.0.4 Group Beta</div>
         <div class="conVersion">
             <ul>
                 <li>bot v.0.4</li>
@@ -91,7 +96,7 @@
     </div>
     <div class="kernel-block">
       <div class="kernel">
-        <div class="version">v.0.3 VK Group Beta</div>
+        <div class="version">v.0.3 Group Beta</div>
         <div class="conVersion">
             <ul>
                 <li>bot v.0.3</li>
@@ -113,7 +118,7 @@
     </div>
     <div class="kernel-block">
       <div class="kernel">
-        <div class="version">v.0.2 VK Group Beta</div>
+        <div class="version">v.0.2 Group Beta</div>
         <div class="conVersion">
             <ul>
                 <li>bot v.0.2</li>
@@ -133,7 +138,7 @@
     </div>
     <div class="kernel-block">
       <div class="kernel">
-        <div class="version">v.0.1 VK User Beta</div>
+        <div class="version">v.0.1 User Beta</div>
         <div class="conVersion">
             <ul>
                 <li>bot v.0.1</li>
@@ -147,7 +152,41 @@
           <p>Первая бета</p>
       </div>
     </div>
-
   </div>
+  <div id="tgver" class="tabcontent">
+    <div class="kernel-block">
+      <div class="kernel">
+        <div class="version">v.0.5 Bot Beta</div>
+        <div class="conVersion">
+            <ul>
+                <li>? ? ?</li>
+            </ul>
+        </div>
+        <a href="https://github.com/kompot69/kompot69.github.io/tree/master/timetable-bot/versions/0.5.zip" class="download">В разработке</a>
+      </div>
+      <div class="kernel-right">
+          <h3>Что нового</h3>
+          <p>
+            • Адаптация бота v.0.5 для Telegram  <br>
+          </p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script type="text/javascript">
+  document.getElementById("defaultOpen").click();
+  function openTab(evt, TabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(TabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}</script>
 </body>
 </html>
