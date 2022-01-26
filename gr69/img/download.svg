@@ -1,9 +1,0 @@
-<?xml version="1.0" ?><svg data-name="Layer 53" id="Layer_53" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><style>
-      .cls-1 {
-        fill: none;
-        stroke: #000;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-width: 2px;
-      }
-    </style></defs><title/><circle class="cls-1" cx="32" cy="32" r="30"/><g><polyline class="cls-1" points="13.96 39.27 13.96 48.84 50.04 48.84 50.04 39.27"/><polyline class="cls-1" points="21.18 29.52 32.04 40.38 42.82 29.61"/><line class="cls-1" x1="32" x2="32" y1="40.38" y2="15.16"/></g></svg>
