@@ -65,6 +65,7 @@ body {
     height: 50px;
   }
   .navigation-link {
+    display: none;
     -webkit-transition: all 500ms;
     transition: all 500ms;
     text-decoration: none;
@@ -115,13 +116,23 @@ body {
   display: inline-block;
 }
 /* Dropdown Content (Hidden by Default) */
-.dropdown-content { 
+.dropdown-content{ 
   display: none;
   position: absolute;
   background-color: #000000d3;
   width: 150px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.623);
   z-index: 1;
+  transform: translateX(-45px);
+}
+#alert{
+  width: 250px;
+  transform: translateX(-200px);
+  padding: 0px 10px;
+}
+#alert p{
+  color: #ff8080;
+  font-weight: 100;
 }
 /* Links inside the dropdown */
 .dropdown-content a {
