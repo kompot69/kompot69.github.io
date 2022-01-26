@@ -8,11 +8,14 @@ body {
   background: linear-gradient(180deg, rgba(0,0,0,0.8522118319984244) 90%, rgba(0,0,0,0) 100%);
   display: flex;
   padding: 13px;
+  position: fixed;
+  width: 100%;
+  height: 25px;
 }
 .site_name{
   font-size: 20px;
   font-weight: 700;
-  margin: 0;
+  margin: 0 auto;
 }
 .site_nav{
   margin: auto;
@@ -34,67 +37,165 @@ body {
   -webkit-transition: all 500ms;
   transition: all 500ms;
 }
-.block_container{
-  display: flex;
+.container{
+  display: block;
   flex-wrap: wrap;
   padding: 10px;
+  padding-top: 50px;
 }
-.block{
-  min-width: 25px;
-  min-height: 25px;
+.subcontainer{
   display: block;
-  margin: 18px;
-  padding: 18px;
-  border-radius: 25px;
-  background: linear-gradient(145deg, #373737, #414141);
-  box-shadow:  5px 5px 7px #333333, -5px -5px 7px #474747;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  padding: 10px;
 }
-.block:hover{
-  box-shadow:  7px 7px 9px #333333, -7px -7px 9px #474747;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  transform: scale(1.04);
+.title{
+  display: flex;
+  padding: 0px 10px ;
+  margin-top: 50px;
+  justify-content: center;
+  white-space: nowrap;
 }
-.my_pic{
-  height: 100px;
-  border-radius: 20px;
-  margin-right: 20px;
-}
-.block_contact_link{
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  border: solid 1px rgba(97, 97, 97, 0);
-  padding: 5px;
-  margin: 1px;
-}
-.block_contact_link:hover{
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
-  text-shadow: 0px 0px 7px aqua;
-  color: aqua;
-  border-right: solid 1px aqua;  
-  border-left: solid 1px aqua;  
-  border-radius: 15px;
+.title::before, .title::after{
+  content: "";
+  margin: 10px 15px;
+  background-color: white;
+  height: 5px;
+  width: 200px;
 }
 .block_title{
-  margin: auto;
-  font-weight: 700;
-  font-size: 18px;
-  text-align: center;
-  padding-bottom: 15px;
-}
-.subblock{
   display: flex;
+  padding-top: 5px;
+  justify-content: center;
 }
-.subsubblock{
+.block_content{
+  border: 1px dotted gray;
+  padding: 0 20px;
+  border-radius: 30px;
+}
+.block_content h3 a{
+  text-decoration: none;
+  border-radius: 10px;
+  margin-left: 3px;
+  color: aqua;
+  border: white 1px solid;
+  padding: 3px 5px 0px 5px;
+}
+.icons{
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 10px auto;
+}
+.icon{
+  height: 40px;
+  text-align: right;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+  background-size: 38px;
+  display: inline-block;
+  text-align: left;
+  padding-left: 45px;
+}
+.icon::after{
   display: block;
+  margin: 12px 10px;
+  font-weight: 600;
 }
-
-@media (max-width: 699px) {
+#py{
+  background-image: url(img/python.svg);
+}
+#py::after{
+  content: "Python";
+}
+#vk{
+  background-image: url(img/vk.svg);
+}
+#vk::after{
+  content: "ВКонтакте";
+}
+#tg{
+  background-image: url(img/tg.svg);
+}
+#tg::after{
+  content: "Telegram";
+}
+#css{
+  background-image: url(img/css.svg);
+}
+#css::after{
+  content: "CSS 3";
+}
+#html{
+  background-image: url(img/html.svg);
+}
+#html::after{
+  content: "HTML 5";
+}
+#js{
+  background-image: url(img/js.svg);
+}
+#js::after{
+  content: "JavaScript";
+}
+.learn_progress{
+  border: 1px solid white;
+  border-radius: 15px;
+  justify-content: center;  
+}
+.learn{
+  margin: 15px auto;
+  display: flex;
+  width: 50%;
+}
+.learn p{
+  color: black;
+  margin: 2px 10px;
+  position: absolute;
+  font-weight: 600;
+}
+progress{
+  height: 20px;
+  width: 100%;
+}
+progress:hover::-webkit-progress-value{
+  initial-value: "100";
+}
+progress::-webkit-progress-value{
+  background-color: white;
+  border-radius: 15px;
+}
+progress::-webkit-progress-bar{
+  background-color: transparent;
+}
+.contact{
+  text-decoration: none;
+  border-radius: 10px;
+  color: aqua;
+  border: white 1px solid;
+  padding: 3px 5px 0px 5px;
+}
+.secret{
+  justify-content: space-between;
+  display: flex;
+  margin: auto;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  width: 50%;
+  max-width: 100%;
+}
+.secret:hover{
+width: 100%;
+max-width: 500px;
+}
+.secret a{
+  color: transparent;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.secret:hover a{
+  color: aqua;
+}
+@media (max-width: 719px) {
   .header{
     display: block;
   }
@@ -109,4 +210,11 @@ body {
   .site_nav_button,.site_nav_button_b{
     margin: 12px;
   }
+  .block_content h3{
+    text-align: center;
+  }
+  .learn{
+    width: 85%;
+  }
+
 }
