@@ -15,7 +15,7 @@ body {
     margin: 10px;
     text-decoration: none;
 }
-.link,.sublink{
+.link-1,.link-2{
     text-align: center;
     border: 1px solid rgb(150, 0, 0);
     color: white;
@@ -26,11 +26,17 @@ body {
     transition: all 500ms;
     text-decoration: none;
 }
-.link{
-    background-color: rgb(150, 0, 0);
+.link-1{
     font-weight: 900;
+    background-image:linear-gradient(
+        to right,
+        rgba(150, 0, 0, 0.5) ,
+        rgb(150, 0, 0) 40%
+      ),  url(/img/arrow_left.svg);
+    background-repeat: repeat;
+    background-size: contain;
 }
 
-.link:hover, .sublink:hover{
-    box-shadow: rgb(150, 0, 0) 0px 0px 20px;
+.link-1:hover, .link-2:hover{
+    box-shadow: rgb(150, 0, 0) 0px 0px 25px;
 }
