@@ -180,63 +180,54 @@ body {
     border-right: 1px solid rgb(78, 78, 78);
   }
   .version {
-    margin: 20px 0px 0px 30px;
+    margin: 20px 0px 20px 30px;
     font-weight: 700;
     font-size: 25px;
-  }
-  .conVersion::before{
-    content: "Включает в себя:";
-    margin-left: 15px;
-  }
-  .conVersion{
-    margin: 10px 0px 0px 35px;
-    border-left: solid 1px aqua;
-  }
-  .conVersion ul{
-      margin-top: 5px;
-      padding-left: 32px;
   }
   .download {
     color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: center;
     display: block;
-    border-top: 1px solid rgb(78, 78, 78);
+    width: 100px;
+    border-radius: 20px;
+    border: 1px solid rgb(78, 78, 78);
     padding: 8px 0px 6px 0px;
-    margin-top: 5px;
+    margin: 50px auto 5px auto;
     -webkit-transition: all 500ms;
     transition: all 500ms;
   }
   .download:hover {
-    text-shadow: 0px 0px 5px aqua;
+    text-shadow: 0px 0px 10px aqua;
     -webkit-transition: all 300ms;
     transition: all 300ms;
+    box-shadow: aqua 0px 0px 5px;
+    border: 1px solid rgb(66, 133, 133);
   }
   .date{
+    margin-top: 15px;
     width: 1px;
     height: 1px;
     transform:translateX(-75px) translateY(10px);
     color: gray;
   }
   .kernel-right {
-    margin-left: auto;
-    width: 50px;
-    -webkit-transition: all 350ms;
-    transition: all 350ms;
-    overflow: hidden; 
+    width: 100%;
+    margin: 5px 6px 5px 15px;
+    padding-top: 5px;
+    height: 150px;
+    overflow: auto; 
   }
   .kernel-right h3 {
-    transform: rotate(-90deg) translateX(-70px) translateY(-50px);
-    margin: 0px 0px 0px 0px;
-    width: 150px;
-    -webkit-transition: all 350ms;
-    transition: all 350ms;
+    text-align: center;
+    margin: 5px;
+    color: rgb(125, 255, 255);
   }
   .kernel-right p{
-    opacity: 0;
-    height: 120px;
-    -webkit-transition: all 350ms;
-    transition: all 350ms;
+    opacity: 100;
+    margin: 0;
+    height: auto;
+    overflow:hidden;
   }
   .kernel-right::-webkit-scrollbar {
      width: 6px;
@@ -251,23 +242,6 @@ body {
      background-color: rgb(90, 180, 180);
      border-radius: 5px;
    }
-  .kernel-right:hover {
-    margin: 5px 6px 5px 15px;
-    padding-top: 5px;
-    width: 1150px;
-    min-height: 100%;
-    max-height: 165px;
-    overflow: auto; 
-  }
-  .kernel-right:hover h3{
-    transform: rotate(0deg) translateX(0px) translateY(0px);
-    color: rgb(125, 255, 255);
-  }
-  .kernel-right:hover p{
-    opacity: 100;
-    height: auto;
-    overflow:hidden;
-  }
   .vkimg {
     width: 35px;
     border: solid 1px rgba(0, 255, 255, 0); 
@@ -358,6 +332,9 @@ body {
     .kernel{
         border-right: none;
     }
+    .download{
+      margin-top: 10px;
+    }
     .lastest {
       margin: auto;
     }
@@ -373,13 +350,7 @@ body {
      }
     .kernel-right {
       border-top: 1px solid rgb(78, 78, 78);
-      display: flex;
-      padding-top: 10px;
-      padding-bottom: 10px;
       margin: 0;
-      padding-top: 5px;
-    }
-    .kernel-right {
       width: auto;
       height: 25px;
       max-height: 180px;
@@ -398,7 +369,7 @@ body {
        width: 6px;
      }
     .kernel-right:hover h3{
-      margin: 10px 15px;
+      margin-top: 15px;
       font-weight: 400;
       font-size: 18px;
       width: 150px;
