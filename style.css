@@ -56,8 +56,16 @@ header{
     font-weight: 200;
 }
 .link-1{
-    background-color: rgb(150, 0, 0);
     font-weight: 900;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    background-image:linear-gradient(
+        to left,
+        rgba(150, 0, 0, 0.5) ,
+        rgb(150, 0, 0) 30%),  
+        url(/img/arrow_right.png);
+    background-repeat: repeat;
+    background-size: contain;
 }
 .link-3{
     border: 1px solid rgb(77, 77, 77);
