@@ -5,8 +5,12 @@ body {
     font-family: "Comfortaa", cursive;
   }
 header{
-    margin: 30px 0;
     text-align: center;
+}
+.title{
+    color: rgb(150, 0, 0);
+    opacity: 10%;
+    margin: 0;
 }
 .photo{
     border: 1px solid rgba(0, 0, 255, 0);
@@ -15,7 +19,7 @@ header{
     -webkit-transition: all 500ms;
     transition: all 500ms;
 }
-.photo:hover{
+.header:hover .photo{
     border-radius: 80px;
     padding: 0px;
     margin: 10px;
@@ -27,28 +31,42 @@ header{
     border: 1px solid rgba(150, 0, 0, 0);
     padding: 20px;
     margin: auto;
-    max-width: 500px;
+    max-width: 500px; 
 }
 .container a{
-    margin: 10px;
     text-decoration: none;
 }
-.link,.sublink{
+.category{
+    color: rgb(150, 0, 0);
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.link-1,.link-2, .link-3{
     text-align: center;
     border: 1px solid rgb(150, 0, 0);
     color: white;
     border-radius: 10px;
     padding: 10px 10px;
-    margin: auto;
+    margin: 10px auto 15px auto;
     -webkit-transition: all 500ms;
     transition: all 500ms;
     text-decoration: none;
+    font-weight: 200;
 }
-.link{
+.link-1{
     background-color: rgb(150, 0, 0);
     font-weight: 900;
 }
-
-.link:hover, .sublink:hover{
-    box-shadow: rgb(150, 0, 0) 0px 0px 20px;
+.link-3{
+    border: 1px solid rgb(77, 77, 77);
+    max-width: 80%; 
+    font-weight: 100;
+}
+.link-1:hover, .link-2:hover{
+    box-shadow: rgb(200, 0, 0) 0px 0px 25px;
+}
+.link-3:hover{
+    box-shadow: rgb(77, 77, 77) 0px 0px 25px;
 }
