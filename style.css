@@ -29,9 +29,6 @@ header{
 }
 .redcam{
     margin: 20px auto 0 auto;
-    background-image:url(/img/redcam.png);
-    background-position: bottom;
-    background-size: 600px;
     width: 40%;
     max-width: 490px; 
     min-width: 100px;
