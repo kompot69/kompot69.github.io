@@ -178,7 +178,7 @@ body {
     margin-top: 35px;
   }
   .dialog{
-    border: 2px solid rgb(0, 124, 124);
+    border: 2px solid rgb(0, 124, 124); 
     border-radius: 30px;
     min-width: 360px;
     height: 328px;
@@ -240,6 +240,12 @@ transition: ease-in 0.5s .5s;
 .showing {
   opacity: 1;
   z-index: 2;
+}
+video {
+  width: 360px;
+  height: 203px;
+  border-radius: 25px;
+  border: 2px solid aqua;
 }
 .title{
   text-align: center;
@@ -324,7 +330,15 @@ transition: ease-in 0.5s .5s;
       display: block;
       margin-top: 20px;
     }
+    .description{
+      margin-left: 0;
+    }
     .dialog {
+      margin-bottom: 20px;
+    }
+    video{
+      display: block;
+      margin: auto;
       margin-bottom: 20px;
     }
   }
