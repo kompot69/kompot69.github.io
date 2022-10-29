@@ -173,24 +173,89 @@ body {
     padding-bottom: 50px;
     padding-top: 20px;
   }
-  .title{
-    text-align: center;
+  .subcontainer{
+    display: flex;
+    margin-top: 35px;
   }
-  .subtitle2{
-    border-top: 2px solid aqua;
-    margin-top: 30px;
-    padding-top: 25px;
-    text-align: center;
+  .dialog{
+    border: 2px solid rgb(0, 124, 124);
+    border-radius: 30px;
+    min-width: 360px;
+    height: 328px;
+    background-color: #1b1b1b;
+    background-image: url(./fon.jpg);
+    background-size: contain;
+    overflow: hidden;
   }
+  .dialog-title{
+    display: flex;
+    border-bottom: 1px solid rgb(0, 124, 124);
+    padding: 10px;
+    background-color: rgb(43, 40, 40);
+  }
+  .dialog-title img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+  }
+  .dialog-title h5{
+    margin: 17px 0 0 15px;
+    font-size: 18px;
+  }
+  
+#dialog-messages-user, #dialog-messages-bot, #dialog-messages-user2, #dialog-messages-bot2 {
+  position: relative;
+  list-style-type: none;
+  height: 20px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.dialog-message-user, .dialog-message-bot, .dialog-message-user2, .dialog-message-bot2 {  
+  
+  font-weight: 900;
+  padding: 8px 10px;
+  border-radius: 20px;
+
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  /*transition: opacity 0.5s;
+  transition: ease-in 0.5s;*/
+}
+.dialog-message-user, .dialog-message-user2 {  
+  display: inline-block;
+  right: 10px;
+  top: 0px;
+  transition: opacity 0.5s;
+  background: rgb(0,211,255);
+background: linear-gradient(126deg, rgb(0, 174, 255) 20%, rgba(0,35,255,1) 80%);
+}
+.dialog-message-bot, .dialog-message-bot2{
+  background-color: rgb(43, 40, 40);
+display: block;
+left: 10px;
+top: 10px;
+transition: ease-in 0.5s .5s;
+}
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+.title{
+  text-align: center;
+}
+.subtitle2{
+  border-top: 2px solid aqua;
+  margin-top: 30px;
+  padding-top: 25px;
+  text-align: center;
+}
   h3 a:hover{
     text-shadow: 0px 0px 5px aqua;
   }
-  .subtitle3{
-    margin-bottom: 10px;
-  }
   .description{
-    margin-left: 10px;
-    border-left: 2px solid aqua;
+    display: block;
+    margin-left: 15px;
     padding-left: 10px;
   }
   .command h3{
@@ -254,6 +319,13 @@ body {
     }
     .navigation {
       justify-content: center;
+    }
+    .subcontainer{
+      display: block;
+      margin-top: 20px;
+    }
+    .dialog {
+      margin-bottom: 20px;
     }
   }
   @media (max-width: 600px) {
