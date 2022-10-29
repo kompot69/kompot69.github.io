@@ -24,7 +24,7 @@
             <a href="https://vk.com/app6441755_-208671433?ref=group_menu" class="navigation-link-dropdown">Добавить в беседу</a>
             <a href="https://vk.com/ptpit_timetable" class="navigation-link-dropdown">Перейти в группу</a>
             <a href="https://vk.com/im?sel=472153219" class="navigation-link-dropdown">Написать админу</a>
-          </div>
+          </div> 
         </div>
         <div class="dropdown">
           <button class="dropbtn"><img src="/img/tg.png" alt="tg" class="vkimg"></button>
@@ -41,13 +41,58 @@
   <div class="onsite-navigation">
   </div>
   <div class="container">
+    
     <h1 class="title">Бот для получения расписания с сайта ПТПИТ</h1>
-    <h2 class="subtitle2">Что умеет? / Какие команды есть?</h2>
-    <h3 class="subtitle3">Команды получения расписания:</h3>
+    <h2 class="subtitle2">Команды получения расписания:</h2>
+    <div class="subcontainer">
+    <div class="dialog">
+      <div class="dialog-title">
+        <img src="./botpic.jpg" alt="logo"/>
+        <h5>Расписание ПТПИТ</h5>
+      </div>
+      <ul id="dialog-messages-user">
+        <li class="dialog-message-user">Расписание на 12.05.22</li>
+        <li class="dialog-message-user showing">Пары завтра</li>
+        <li class="dialog-message-user">Расписание на субботу</li>
+        <li class="dialog-message-user">Какое расписание было вчера?</li>
+      </ul>      
+      <ul id="dialog-messages-bot">
+        <li class="dialog-message-bot">
+          Расписание на четверг, 12.05.22<br> <br>
+          2️⃣ 10:25-12:00 (1П) <br>
+          Иностранный язык <br>
+          [к.407] Дубровина Н. А. <br> <br>
+          3️⃣ 12:20-14:10 <br>
+          История <br>
+          [к.409] Разумов Н. В. <br>
+        </li>
+        <li class="dialog-message-bot">
+          Расписание на среду, 18.05.22<br> <br>
+          3️⃣ 12:20-14:10 <br>
+          Математика <br>
+          [к.403] Трясолобова А. А. <br> <br>
+          4️⃣ 14:15-15:50 <br>
+          Математика <br>
+          [к.403] Трясолобова А. А.
+        </li>
+        <li class="dialog-message-bot">
+          Расписание на субботу, 21.05.22<br> <br>
+          2️⃣ 10:25-12:00  <br>
+          Экономика организации<br>
+          [ДО (без ссылки)] Шуркина Е. А.<br>
+        </li>
+        <li class="dialog-message-bot">
+          Расписание на понедельник, 16.05.22<br> <br>
+          1️⃣ 08:30-10:05   <br>
+          Физическая культура <br>
+          [спорт. зал] Бобкова С. В. <br> <br>
+          2️⃣ 10:25-12:00 <br>
+          История <br>
+          [к.409т] Разумов Н. В. <br>
+        </li>
+      </ul>
+    </div>
     <div class="description">
-      <p>
-        Регистр значения не имеет
-      </p>
       <div class="command">
         <h3>Расписание/пары вчера/сегодня/завтра/послезавтра</h3>
         <p>
@@ -79,51 +124,92 @@
         </p>
       </div>
     </div>
-    <h3 class="subtitle3">Остальные команды:</h3>
-    <div class="description">
-      <p>
-        &#128110; - команда для админов <br>
-        &#128101; - команда для всех пользователей <br>
-      </p>
-      <div class="command">
-        <h3>Бот группа &#128101;</h3>
+    </div>
+    <h2 class="subtitle2">Остальные команды:</h2>
+    <div class="subcontainer">
+      
+    <div class="dialog">
+      <div class="dialog-title">
+        <img src="./botpic.jpg" alt="logo"/>
+        <h5>Расписание ПТПИТ</h5>
+      </div>
+      <ul id="dialog-messages-user2">
+        <li class="dialog-message-user2">Бот рестарт</li>
+        <li class="dialog-message-user2 showing">Бот статус</li>
+        <li class="dialog-message-user2">Бот группа 20сд1п</li>
+        <li class="dialog-message-user2">Бот помощь</li>
+      </ul>      
+      <ul id="dialog-messages-bot2">
+        <li class="dialog-message-bot2">
+          ☑ Выход <br>
+        </li>
+        <li class="dialog-message-bot2">
+          🆗 ptpit.ru: 200 OK <br>
+          🆗 api.ptpit.ru: 401 Unauthorized <br>
+          🆗 moodle.ptpit.ru: 200 OK <br>
+          🆗 timetable.ptpit.ru: 200 OK <br>
+          🕒 29.10.22 08:23:47 <br>
+          ⚙ v.0.6.6 vk | 👮 1 <br>
+          — — — — <br>
+          👥 20сд1п | 🆔 472153219 <br>
+        </li>
+        <li class="dialog-message-bot2">
+          ☑ Установлена группа 20сд1п <br>
+        </li>
+        <li class="dialog-message-bot2">
+          [ Доступные команды: ] <br>
+          • Пары сегодня/завтра <br>
+          • Пара/пары сейчас/следующие <br>
+          • Расписание на <день недели> <br>
+          • Расписание на <дд.мм.гг> <br>
+          • Расписание звонков <br> <br>
+          • Бот помощь <br>
+          • Бот статус <br>
+          • Бот группа <группа> <br>
+        </li>
+      </ul>
+    </div>
+      <div class="description">
         <p>
-          Устанавливает группу для чата. <br>
-          Пример: Бот группа 18сзи1
+          &#128110; - команда для админов <br>
+          &#128101; - команда для всех пользователей <br>
         </p>
-      </div>
-      <div class="command">
-        <h3>Бот помощь &#128101;</h3> 
-        <p>Покажет список всех доступных пользователю команд.</p>
-      </div>
-      <div class="command">
-        <h3>Добавить админа &#128110;</h3> 
-        <p>
-          Добавляет ID пользователя в список админов. <br>
-          Пример: Добавить админа 472153219
-        </p>
-      </div>
-      <div class="command">
-        <h3>Бот статус &#128101; &#128110;</h3> 
-        <p>
-          Покажет коды состояния сайтов, ID чата и установленную группу. <br>
-          Покажет кол-во админов и время системы. &#128110;
-        </p>
-      </div>
-      <div class="command">
-        <h3>Бот рестарт &#128110;</h3> 
-        <p>Выход из бота для последующего его запуска контроллером.</p>
+        <div class="command">
+          <h3>Бот группа &#128101;</h3>
+          <p>
+            Устанавливает группу для чата. <br>
+            Пример: Бот группа 18сзи1
+          </p>
+        </div>
+        <div class="command">
+          <h3>Бот помощь &#128101;</h3> 
+          <p>Покажет список всех доступных пользователю команд.</p>
+        </div>
+        <div class="command">
+          <h3>Добавить админа &#128110;</h3> 
+          <p>
+            Добавляет ID пользователя в список админов. <br>
+            Пример: Добавить админа 472153219
+          </p>
+        </div>
+        <div class="command">
+          <h3>Бот статус &#128101; &#128110;</h3> 
+          <p>
+            Покажет коды состояния сайтов, ID чата и установленную группу. <br>
+            Покажет кол-во админов и время системы. &#128110;
+          </p>
+        </div>
+        <div class="command">
+          <h3>Бот рестарт &#128110;</h3> 
+          <p>Выход из бота для последующего его запуска контроллером.</p>
+        </div>
       </div>
     </div>
+    
     <h2 class="subtitle2">Установка (Linux)</h2>
       <h3>1. <a href="download">Скачать</a> python-бота</h3>
       <h3>2. Установить необходимые python-пакеты из requirements.txt</h3> 
       <h3>3. Запустить botController.py и следовать инструкциям в консоли</h3>
-    <h2 class="subtitle2">Деплой на хостинг (<a href="https://deploy-f.com/">Deploy-F</a>)</h2> 
-      <p>Доступно с версии 0.3</p>
-      <h3>1. Выполнить устновку на локальной машине</h3> 
-      <h3>2. Заархивировать все созданые файлы бота</h3>
-      <h3>3. Залить готовый архив на хостинг</h3>
     <h2 class="subtitle2">Контакты / Разработчики</h2>
     <div class="contacts">
       <div>
@@ -143,6 +229,30 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>  
+  <script type="text/javascript">
+    var slides1 = document.querySelectorAll('#dialog-messages-user .dialog-message-user');
+    var slides2 = document.querySelectorAll('#dialog-messages-bot .dialog-message-bot');
+
+    var slides3 = document.querySelectorAll('#dialog-messages-user2 .dialog-message-user2');
+    var slides4 = document.querySelectorAll('#dialog-messages-bot2 .dialog-message-bot2');
+
+    var currentSlide = 0;
+    var currentSlide2 = 0;
+    var slideInterval = setInterval(nextSlide, 7000);
+
+    function nextSlide() {
+      slides1[currentSlide].className = 'dialog-message-user';
+      slides2[currentSlide].className = 'dialog-message-bot';
+      slides3[currentSlide].className = 'dialog-message-user2';
+      slides4[currentSlide].className = 'dialog-message-bot2';
+      currentSlide = (currentSlide + 1) % slides1.length;
+      currentSlide2 = (currentSlide2 + 1) % slides3.length;
+      slides1[currentSlide].className = 'dialog-message-user showing';
+      slides2[currentSlide].className = 'dialog-message-bot showing';
+      slides3[currentSlide].className = 'dialog-message-user2 showing';
+      slides4[currentSlide].className = 'dialog-message-bot2 showing';
+    }
+  </script>
 </body>
 </html>
