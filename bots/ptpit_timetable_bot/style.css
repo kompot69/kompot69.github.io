@@ -152,7 +152,7 @@ body {
   border-right: solid 3px aqua;  
   border-left: solid 3px aqua;  
 }
-.dropdown:hover .vkimg{
+.dropdown:hover .button-img{
   border-right: solid 1px aqua;  
   border-left: solid 1px aqua;  
   border-radius: 20px;
