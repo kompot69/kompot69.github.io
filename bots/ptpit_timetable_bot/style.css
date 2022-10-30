@@ -304,6 +304,9 @@ video {
     .navigation {
       justify-content: center;
     }
+    .dropdown-content{
+      transform: translateX(-45px);
+    }
     .subcontainer{
       display: block;
       margin-top: 20px;
@@ -327,7 +330,7 @@ video {
           height: auto;
       }
   }
-  @media (max-width: 359px) {
+  @media (max-width: 400px) {
     .header:before {
       margin-left: 5px;
       content: "Сайт не адаптирован под диcплей меньше 360 пикселей.";
