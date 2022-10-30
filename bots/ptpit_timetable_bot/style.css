@@ -206,7 +206,7 @@ body {
   top: 0px;
   transition: opacity 0.5s;
   background: rgb(0,211,255);
-background: linear-gradient(126deg, rgb(0, 174, 255) 20%, rgb(255,0,255) 80%);
+background: linear-gradient(126deg, rgb(0, 174, 255) 20%, purple 80%);
 }
 .dialog-message-bot, .dialog-message-bot2{
   background-color: rgb(43, 40, 40);
@@ -229,7 +229,9 @@ video {
   text-align: center;
 }
 .subtitle2{
-  border-top: 2px solid aqua;
+  border-top: 2px solid aqua;   
+  border-image: linear-gradient(to right, aqua, rgb(255, 0, 255));
+  border-image-slice: 1;
   margin-top: 30px;
   padding-top: 25px;
   text-align: center;
