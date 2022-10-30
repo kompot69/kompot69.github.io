@@ -325,7 +325,7 @@ video {
   }
   @media (max-width: 600px) {
       .header-left{
-          display: flex;
+          display: block;
           flex-wrap: wrap;
           height: auto;
       }
