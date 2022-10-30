@@ -228,7 +228,7 @@ body {
   top: 0px;
   transition: opacity 0.5s;
   background: rgb(0,211,255);
-background: linear-gradient(126deg, rgb(0, 174, 255) 20%, rgba(0,35,255,1) 80%);
+background: linear-gradient(126deg, rgb(0, 174, 255) 20%, rgb(255,0,255) 80%);
 }
 .dialog-message-bot, .dialog-message-bot2{
   background-color: rgb(43, 40, 40);
