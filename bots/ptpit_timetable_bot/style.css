@@ -333,7 +333,7 @@ video {
   @media (max-width: 400px) {
     .header:before {
       margin-left: 5px;
-      content: "Сайт не адаптирован под диcплей меньше 360 пикселей.";
+      content: "Сайт не адаптирован под диcплей меньше 400 пикселей.";
       color: red;
     }
   }
