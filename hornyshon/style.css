@@ -1,0 +1,50 @@
+body {
+  background-color: #1f1f1f;
+  color: rgb(255, 255, 255);
+  margin: 0 70px;
+  font-family: "Raleway", cursive;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+}
+.header h1{
+  margin: 15px 0;
+}
+.navigations{
+  margin-top: 25px;
+}
+.header a{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+  margin-left: 20px;
+}
+.first-img{
+  height: 100px;
+  background-image: url(./photos/0.jpg);
+  margin-bottom: 70px;
+}
+.images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.images img:hover{
+  transform: scale(105%);
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.images img{
+  object-fit: scale-down;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+#mini-vertical{
+  width: 32%;
+  margin-bottom: 10px;
+}
