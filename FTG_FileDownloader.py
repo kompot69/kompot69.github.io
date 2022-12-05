@@ -35,7 +35,7 @@ class DownloadMod(loader.Module):
         args = utils.get_args(message)
         if not len(args) == 1:
             return await message.edit("<b>Неверная команда(аргумент)!</b>")
-        command = "wget -0 \"tempfile\" "+str(args[0])
+        command = "wget -O tempfile "+str(args[0])
 
         await message.edit("<b>Загружаю файл...</b>")
         await message.client.send_message(message.to_id, "<b>Команда загрузки:</b> "+command)
@@ -46,7 +46,7 @@ class DownloadMod(loader.Module):
 
         await message.edit("<b>Выгружаю файл...</b>")
         try:
-           await message.client.send_file(message.to_id, tempfile.py)
+           await message.client.send_file(message.to_id, tempfile)
         except ValueError:
            await message.edit("<b>Не удалось выгрузить файл!</b>")
 
