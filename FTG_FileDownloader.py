@@ -36,7 +36,7 @@ class DownloadMod(loader.Module):
         if not len(args) == 1:
             return await message.edit("<b>Неверная команда(аргумент)!</b>")
 
-        filename=link
+        filename=str(args[0])
         while "/" in filename:
            filename=filename.partition('/')[2]
         command = "wget -O",filename,str(args[0])
