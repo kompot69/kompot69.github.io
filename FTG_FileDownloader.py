@@ -35,10 +35,13 @@ class DownloadMod(loader.Module):
         args = utils.get_args(message)
         if not len(args) == 1:
             return await message.edit("<b>Неверная команда(аргумент)!</b>")
-        command = "wget -O tempfile "+str(args[0])
 
-        await message.edit("<b>Загружаю файл...</b>")
-        await message.client.send_message(message.to_id, "<b>Команда загрузки:</b> "+command)
+        filename=link
+        while "/" in filename:
+           filename=filename.partition('/')[2]
+        command = "wget -O",filename,str(args[0])
+
+        await message.edit("<b>Загружаю файл "+filename+"...</b>") 
         try:
            os.system(command)
         except ValueError:
