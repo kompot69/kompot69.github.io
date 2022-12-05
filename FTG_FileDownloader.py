@@ -2,6 +2,7 @@
 
 import logging
 import time
+import os
 from datetime import datetime
 from io import BytesIO
 from .. import loader, utils
@@ -43,48 +44,9 @@ class DownloadMod(loader.Module):
         link = str(args[0])
         
         await message.edit("<b>Загружаю файл...</b>")
+        try:
+           os.system("wget -0 tempfile",link)
+        except ValueError:
+           return await message.edit("<b>Не удалось загрузить файл!</b>")
         await message.edit("<b>Выгружаю файл...</b>")
-
-
-
-    @loader.test(func=logstest)
-    async def logscmd(self, message):
-        """.logs <level>
-           Dumps logs. Loglevels below WARNING may contain personal info."""
-        args = utils.get_args(message)
-        if not len(args) == 1 and not len(args) == 2:
-            args = ["40"]
-        try:
-            lvl = int(args[0])
-        except ValueError:
-            # It's not an int. Maybe it's a loglevel
-            lvl = getattr(logging, args[0].upper(), None)
-        if not isinstance(lvl, int):
-            await utils.answer(message, self.strings("bad_loglevel", message))
-            return
-        if not (lvl >= logging.WARNING or (len(args) == 2 and args[1] == self.strings("logs_force", message))):
-            await utils.answer(message,
-                               self.strings("logs_unsafe", message).format(lvl=lvl, force=self.strings("logs_force", message)))
-            return
-        [handler] = logging.getLogger().handlers
-        logs = ("\n".join(handler.dumps(lvl))).encode("utf-8")
-        if not len(logs) > 0:
-            await utils.answer(message, self.strings("no_logs", message).format(lvl))
-            return
-        logs = BytesIO(logs)
-        logs.name = self.strings("logs_filename", message).format(lvl)
-        await utils.answer(message, logs)
-
-    @loader.owner
-    async def suspendcmd(self, message):
-        """.suspend <time>
-           Suspends the bot for N seconds"""
-        # Blocks asyncio event loop, preventing ANYTHING happening (except multithread ops,
-        # but they will be blocked on return).
-        try:
-            time.sleep(int(utils.get_args_raw(message)))
-        except ValueError:
-            await utils.answer(message, self.strings("suspend_invalid_time", message))
-
-    async def client_ready(self, client, db):
-        self.client = client
+        await message.edit("<b>Готово!</b> Временный файл удалён.")
