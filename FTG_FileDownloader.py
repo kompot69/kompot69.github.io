@@ -26,12 +26,6 @@ async def logstest(conv):
 @loader.tds
 class DownloadMod(loader.Module):
     """File Downloader by @kompot_69"""
-    strings = {"name": "File Downloader",
-               "fail": "<b>Не удалось загрузить файл!</b>",
-               "bad_link": "<b>Неверная ссылка!</b>",
-               "downloading": "<b>Загружаю файл...</b>",
-               "uploading": "<b>Выгружаю файл...</b>",
-               "filename": "file[{}].txt"}
 
     @loader.test(resp="Pong")
     @loader.unrestricted
@@ -50,9 +44,13 @@ class DownloadMod(loader.Module):
            return await message.edit("<b>Не удалось загрузить файл!</b>")
 
         await message.edit("<b>Выгружаю файл...</b>")
-        
         try:
-           os.system("rm filename")
+           await client.send_file(message.to_id, tempfile)
+        except ValueError:
+           await message.edit("<b>Не удалось выгрузить файл!</b>")
+
+        try:
+           os.system("rm tempfile")
         except ValueError:
            return await message.client.send_message(message.to_id, "<b>Не удалось удалить временный файл!</b>")
         await message.delete()
