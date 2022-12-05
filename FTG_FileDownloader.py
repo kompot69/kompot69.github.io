@@ -40,7 +40,7 @@ class DownloadMod(loader.Module):
         url = str(args[0])
         parsed = urlparse(url)
         filename = os.path.basename(parsed.path)
-        filedir = "downloaded/"+filename
+        filedir = "downloaded/"+filename[1:]
 
         await message.edit("<b>Загружаю файл "+filename+"...</b>") 
         try:
