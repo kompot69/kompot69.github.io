@@ -1,4 +1,4 @@
-# Friendly Telegram File Downloader (Uploader) module by @kompot_69
+# Friendly Telegram File Downloader (Uploader) module by @kompot_69 & @mirivan
 
 import logging
 import time
@@ -26,7 +26,7 @@ async def logstest(conv):
 
 @loader.tds
 class DownloadMod(loader.Module):
-    """File Downloader by @kompot_69"""
+    """File Downloader by @kompot_69 and @mirivan"""
     strings = {"name": "File Downloader"}
 
     @loader.unrestricted
@@ -47,7 +47,7 @@ class DownloadMod(loader.Module):
         except ValueError:
            return await message.edit("<b>Не удалось загрузить файл!</b>")
 
-        await message.edit("<b>Выгружаю файл...</b>")
+        await message.edit("<b>Выгружаю файл "+filename+"...</b>")
         try:
            await message.client.send_file(message.to_id, filename)
         except ValueError:
