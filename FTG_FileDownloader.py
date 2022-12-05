@@ -39,8 +39,9 @@ class DownloadMod(loader.Module):
         filename=str(args[0])
         while "/" in filename:
            filename=filename.partition('/')[2]
-        command = "wget -O",filename,str(args[0])
            filename=str(filename)
+        command = "wget -O",filename,str(args[0])
+           
 
         await message.edit("<b>Загружаю файл "+filename+"...</b>") 
         try:
