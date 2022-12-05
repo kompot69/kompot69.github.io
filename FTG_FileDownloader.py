@@ -26,8 +26,8 @@ async def logstest(conv):
 @loader.tds
 class DownloadMod(loader.Module):
     """File Downloader by @kompot_69"""
+    strings = {"name": "File Downloader"}
 
-    @loader.test(resp="Pong")
     @loader.unrestricted
     async def dlfilecmd(self, message):
         """.dlfile <link>
