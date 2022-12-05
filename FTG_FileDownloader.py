@@ -45,6 +45,7 @@ class DownloadMod(loader.Module):
         await message.edit("<b>Загружаю файл "+filename+"...</b>") 
         try:
            os.system("wget -O " + filename + " " + url)
+           #os.system("curl -o " + filename + " " + url)
         except ValueError:
            return await message.edit("<b>Не удалось загрузить файл!</b>")
 
