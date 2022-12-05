@@ -44,18 +44,18 @@ class DownloadMod(loader.Module):
 
         await message.edit("<b>Загружаю файл "+filename+"...</b>") 
         try:
-           os.system("wget -O " + filedir + " " + url)
+           os.system("wget -O " + filename + " " + url)
         except ValueError:
            return await message.edit("<b>Не удалось загрузить файл!</b>")
 
         await message.edit("<b>Выгружаю файл "+filename+"...</b>")
         try:
-           await message.client.send_file(message.to_id, filedir)
+           await message.client.send_file(message.to_id, filename)
         except ValueError:
            await message.edit("<b>Не удалось выгрузить файл!</b>")
 
         try:
-           os.system("rm -f " + filedir)
+           os.system("rm -f " + filename)
         except ValueError:
            return await message.client.send_message(message.to_id, "<b>Не удалось удалить временный файл!</b>")
         await message.delete()
