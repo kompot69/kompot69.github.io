@@ -36,16 +36,13 @@ class DownloadMod(loader.Module):
         if not len(args) == 1:
             return await message.edit("<b>Неверная команда(аргумент)!</b>")
 
-        filename=str(args[0])
-        while "/" in filename:
-           filename=filename.partition('/')[2]
-           filename=str(filename)
-        command = "wget -O",filename,str(args[0])
-           
+        url=str(args[0])
+        parsed = urlparse(url)
+        filename = os.path.basename(parsed.path)
 
         await message.edit("<b>Загружаю файл "+filename+"...</b>") 
         try:
-           os.system(command)
+           os.system("wget -O " + filename + " " + url)
         except ValueError:
            return await message.edit("<b>Не удалось загрузить файл!</b>")
 
@@ -56,7 +53,7 @@ class DownloadMod(loader.Module):
            await message.edit("<b>Не удалось выгрузить файл!</b>")
 
         try:
-           os.system("rm tempfile")
+           os.system("rm -f " + filename)
         except ValueError:
            return await message.client.send_message(message.to_id, "<b>Не удалось удалить временный файл!</b>")
         await message.delete()
