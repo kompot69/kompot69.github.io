@@ -45,7 +45,7 @@ class DownloadMod(loader.Module):
 
         await message.edit("<b>Выгружаю файл...</b>")
         try:
-           await client.send_file(message.to_id, tempfile)
+           await message.client.send_file(message.to_id, tempfile)
         except ValueError:
            await message.edit("<b>Не удалось выгрузить файл!</b>")
 
