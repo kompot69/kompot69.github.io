@@ -35,7 +35,7 @@ class DownloadMod(loader.Module):
         args = utils.get_args(message)
         if not len(args) == 1:
             return await message.edit("<b>Неверная команда(аргумент)!</b>")
-        command = "wget -0 tempfile "+str(args[0])
+        command = "wget -0 tempfile.py "+str(args[0])
 
         await message.edit("<b>Загружаю файл...</b>")
         try:
