@@ -38,6 +38,7 @@ class DownloadMod(loader.Module):
         command = "wget -0 tempfile "+str(args[0])
 
         await message.edit("<b>Загружаю файл...</b>")
+        await message.client.send_message(message.to_id, "<b>Команда загрузки:</b> "+command)
         try:
            os.system(command)
         except ValueError:
