@@ -52,5 +52,6 @@ class DownloadMod(loader.Module):
         try:
            os.system("rm filename")
         except ValueError:
-           return await message.edit("<b>Не удалось удалить временный файл!</b>")
+           await message.client.send_message(message.to_id, "<b>Не удалось удалить временный файл!<\b>")
+        await message.client.send_message(message.to_id, "<b>Не удалось удалить временный файл!<\b>")
         await message.edit("<b>Готово!</b> Временный файл удалён.")
