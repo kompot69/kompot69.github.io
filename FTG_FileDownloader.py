@@ -42,16 +42,17 @@ class DownloadMod(loader.Module):
         if not len(args) == 1:
             return await message.edit("<b>Неверная команда(аргумент)!</b>")
         command = "wget -0 tempfile "+str(args[0])
+
         await message.edit("<b>Загружаю файл...</b>")
         try:
            os.system(command)
         except ValueError:
            return await message.edit("<b>Не удалось загрузить файл!</b>")
+
         await message.edit("<b>Выгружаю файл...</b>")
         
         try:
            os.system("rm filename")
         except ValueError:
-           await message.client.send_message(message.to_id, "<b>Не удалось удалить временный файл!<\b>")
-        await message.client.send_message(message.to_id, "<b>Не удалось удалить временный файл!<\b>")
-        await message.edit("<b>Готово!</b> Временный файл удалён.")
+           return await message.client.send_message(message.to_id, "<b>Не удалось удалить временный файл!</b>")
+        await message.delete()
