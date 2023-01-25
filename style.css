@@ -43,38 +43,80 @@ header{
     margin-bottom: 0;
     margin-top: 30px;
 }
-.link-1,.link-2, .link-3{
+.link-large, .link-small{
     text-align: center;
     border: 1px solid rgb(150, 0, 0);
     color: white;
     border-radius: 10px;
     padding: 10px 10px;
     margin: 10px auto 15px auto;
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
-    text-decoration: none;
-    font-weight: 200;
-}
-.link-1{
-    font-weight: 900;
     -webkit-transition: all 300ms;
     transition: all 300ms;
-    background-image:linear-gradient(
-        to left,
-        rgba(150, 0, 0, 0.5) ,
-        rgb(150, 0, 0) 30%),  
-        url(/img/arrow_right.png);
-    background-repeat: repeat;
+    text-decoration: none;
+    font-weight: 200;
+    background-repeat: no-repeat;
+    background-position: right;
     background-size: contain;
 }
-.link-3{
+.link-small{
     border: 1px solid rgb(77, 77, 77);
     max-width: 80%; 
     font-weight: 100;
 }
-.link-1:hover, .link-2:hover{
+.link-small:hover{
+    box-shadow: rgb(77, 77, 77) 0px 0px 25px;
+}
+.link-large:hover{
     box-shadow: rgb(200, 0, 0) 0px 0px 25px;
 }
-.link-3:hover{
-    box-shadow: rgb(77, 77, 77) 0px 0px 25px;
+#red-filled{
+    font-weight: 900;
+    background-image:linear-gradient(
+        to left,
+        rgba(150, 0, 0, 0.5) ,
+        rgb(150, 0, 0) 25%);
+}
+#red-filled-right{
+    font-weight: 900;
+    background-image:linear-gradient(
+        to left,
+        rgba(150, 0, 0, 0.5) ,
+        rgb(150, 0, 0) 25%),  
+        url(/img/arrow_right.svg);
+}
+#red-filled-newtab{
+    font-weight: 900;
+    background-image:linear-gradient(
+        to left,
+        rgba(150, 0, 0, 0.5) ,
+        rgb(150, 0, 0)  25%),  
+        url(/img/new_tab.svg);
+}
+#red-right{
+    background-image:linear-gradient(
+        to left,
+        rgba(42, 42, 44, 0.5) ,
+        rgb(42, 42, 44) 25%),  
+        url(/img/arrow_right.svg);
+}
+#red-newtab{
+    background-image:linear-gradient(
+        to left,
+        rgba(42, 42, 44, 0.5) ,
+        rgb(42, 42, 44) 25%),  
+        url(/img/new_tab.svg);
+}
+#gray-newtab{
+    background-image:linear-gradient(
+    to left,
+    rgba(42, 42, 44, 0.5) ,
+    rgb(42, 42, 44) 23%),  
+    url(/img/new_tab.svg);
+}
+#gray-right{
+    background-image:linear-gradient(
+    to left,
+    rgba(42, 42, 44, 0.5) ,
+    rgb(42, 42, 44) 23%),  
+    url(/img/arrow_right.svg);
 }
