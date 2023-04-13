@@ -137,18 +137,6 @@ body {
    display: block; 
  } 
   
-   .onsite-navigation { 
-     background-image: -webkit-linear-gradient(top, black, rgb(43, 40, 40)); 
-     height: 15px; 
-   }
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    width: 90%;
-    padding-bottom: 50px;
-    padding-top: 20px;
-  }
-  
 
 .onsite-navigation {
   background-image: -webkit-linear-gradient(top, black, rgb(43, 40, 40));
