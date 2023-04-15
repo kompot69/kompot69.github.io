@@ -144,6 +144,16 @@ body {
     background-image: -webkit-linear-gradient(top, black, rgb(43, 40, 40));
     height: 15px;
   }
+  .the_end{
+    color: red;
+    text-align: center;
+    border: 1px solid red;
+    width: 90%;
+    max-width: 440px;
+    margin: auto;
+    border-radius: 50px;
+    padding: 5px;
+  }
   .container {
     max-width: 1200px;
     margin: auto;
