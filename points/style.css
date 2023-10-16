@@ -56,8 +56,8 @@ body {
     
     position: relative;
     display: inline-block;
-    width: 100px;
-    height: 30px;
+    width: 80px;
+    height: 28px;
     margin-left: 80px;
   }
 
@@ -69,13 +69,14 @@ body {
   }
 
   .toggle-switch-slider {
+    height: 20px;
     position: absolute;
     cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #cccccc86;
+    border: 1px solid rgb(120, 120, 120);
     transition: .4s;
     border-radius: 50px;
   }
@@ -86,19 +87,19 @@ body {
     width: 50px;
     left: 0px;
     bottom: 0px;
-    background-color: white;
+    background-color:rgb(120, 120, 120);
     transition: .4s;
     border-radius: 50px;
     content: "до 35";
     font-size: 15px;
-    color: black;
+    color: white;
     font-weight: 900;
     text-align: center;
   }
 
 
   input:checked + .toggle-switch-slider:before {
-    transform: translateX(50px);
+    transform: translateX(29px);
     content: "35+";
   }
   #output{
