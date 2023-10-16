@@ -14,7 +14,7 @@ body {
   select{
     margin-bottom: 10px;
     border-radius: 10px;
-    background-color: rgb(42, 42, 44);
+    background-color: rgb(120, 120, 120);
     color: white;
   }
   label {
@@ -43,6 +43,9 @@ body {
   #powerresult,#staminaresult,#speedresult{
     border-radius: 5px;
     width: 120px;
+    background-color: rgb(120, 120, 120);
+    color: white;
+    
   }
   .toggle-switch::before{
     content: "Возраст";
@@ -101,7 +104,11 @@ body {
   #output{
     border-top: 1px solid white;
     display: block;
+    transition: .5s;
+  }
+  #points{
     text-align: center;
+    font-weight: 900;
   }
   
   #powerpoint,#speedpoint,#staminapoint{
