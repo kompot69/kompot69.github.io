@@ -40,7 +40,7 @@ body {
   .option{
     padding-right: 5px;
   }
-  #powerresult,#staminaresult,#speedresult{
+  #powerresult,#dexterityresult,#staminaresult,#speedresult{
     border-radius: 5px;
     width: 120px;
     background-color: rgb(120, 120, 120);
@@ -103,6 +103,7 @@ body {
     content: "35+";
   }
   #output{
+    margin-top: 15px;
     border-top: 1px solid white;
     display: block;
     transition: .5s;
@@ -111,8 +112,13 @@ body {
     text-align: center;
     font-weight: 900;
   }
+  #final{
+    text-align: center;
+    font-weight: 900;
+    font-size: 12px;
+  }
   
-  #powerpoint,#speedpoint,#staminapoint{
+  #powerpoint,#dexteritypoint,#speedpoint,#staminapoint{
     width: 202px;
     height: 15px;
     border-bottom: 1px solid white;
@@ -120,7 +126,7 @@ body {
     font-size: 14px;
     margin: 0;
   }
-  #powerpoints,#speedpoints,#staminapoints{
+  #powerpoints,#dexteritypoints,#speedpoints,#staminapoints{
     transition: .9s;
     margin: 0;
     width: 0px;
