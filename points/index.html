@@ -49,7 +49,7 @@
             <label for="stamina">Выносливость:</label>
             <select id="stamina">
                 <option value="1">24.Бег 1км</option>
-                <option value="1">❌24.Б3к</option>
+                <option value="2">❌24.Б3к</option>
             </select>
             <label for="staminaresult">Результат:</label>
             <input type="text" id="staminaresult" placeholder="Введите результат" required>
@@ -116,14 +116,7 @@
           staminapoints = podt(staminaresult.replace(",", "."));
           points += staminapoints;
           break;
-        case "3":
-          staminapoints = podt(staminaresult).replace(",", ".");
-          points += staminapoints;
-          break;
-        case "4":
-          staminapoints = podt(staminaresult.replace(",", "."));
-          points += staminapoints;
-          break;
+        
       }
 
       document.getElementById("points").textContent = "Вы заработали " + points + " баллов.";
