@@ -27,9 +27,7 @@
             <label for="power">Сила:</label>
             <select id="power">
                 <option value="1">3.Подтягивания</option>
-                <option value="2">-</option>
-                <option value="3">-</option>
-                <option value="4">-</option>
+                <option value="2">❌6.ПСнП</option>
             </select>
             <label for="powerresult">Результат:</label>
             <input type="text" id="powerresult" placeholder="Введите результат" required>
@@ -41,7 +39,7 @@
                 <option value="1">32.Бревно</option>
                 <option value="2">17.Бег 60м</option>
                 <option value="3">18.Бег 100м</option>
-                <option value="4">-</option>
+                <option value="4">❌19.ЧБ</option>
             </select>
             <label for="speedresult">Результат:</label>
             <input type="text" id="speedresult" placeholder="Введите результат" required>
@@ -51,9 +49,7 @@
             <label for="stamina">Выносливость:</label>
             <select id="stamina">
                 <option value="1">24.Бег 1км</option>
-                <option value="2">-</option>
-                <option value="3">-</option>
-                <option value="4">-</option>
+                <option value="1">❌24.Б3к</option>
             </select>
             <label for="staminaresult">Результат:</label>
             <input type="text" id="staminaresult" placeholder="Введите результат" required>
@@ -91,14 +87,7 @@
           powerpoints = podt(powerresult.replace(",", "."));
           points += powerpoints;
           break;
-        case "3":
-          powerpoints = podt(powerresult.replace(",", "."));
-          points += powerpoints;
-          break;
-        case "4":
-          powerpoints = podt(powerresult.replace(",", "."));
-          points += powerpoints;
-          break;
+        
       }
       switch (speed) {
         case "1":
