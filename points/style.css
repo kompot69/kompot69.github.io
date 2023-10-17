@@ -5,8 +5,13 @@ body {
     font-family: "Comfortaa", cursive;
 
   }
+.container::before{
+  content: "Cтраница в тестовом режиме";
+  color: rgb(134, 67, 67);
+  text-align: right;
+}
 .container {
-    max-width: 600px;
+    max-width: 655px;
     margin: 0 auto;
     padding: 20px;
     
@@ -16,6 +21,7 @@ body {
     border-radius: 10px;
     background-color: rgb(120, 120, 120);
     color: white;
+    max-width: 150px;
   }
   label {
     display: block;
@@ -33,43 +39,47 @@ body {
   button:hover{
     box-shadow: white 0px 0px 10px;
   }
+  #age{
+    margin-left: 5px;
+  }
   .options{
     display: flex;
     margin: 30px auto;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
   .option{
-    padding-right: 5px;
+    margin: 5px;
   }
   #powerresult,#dexterityresult,#staminaresult,#speedresult{
     border-radius: 5px;
-    width: 120px;
+    width: 145px;
     background-color: rgb(120, 120, 120);
     color: white;
-    
   }
+
+
   .toggle-switch::before{
-    content: "Возраст";
+    content: "Пол:";
     font-size: 15px;
-    margin-left: -80px;
+    margin-left: -40px;
   }
   .toggle-switch {
     
     position: relative;
     display: inline-block;
-    width: 80px;
+    width: 50px;
     height: 28px;
-    margin-left: 80px;
+    margin-left: 60px;
   }
-
   .toggle-switch input {
     opacity: 0;
     width: 0;
     margin-left: 80px;
     height: 0;
   }
-
   .toggle-switch-slider {
-    height: 20px;
+    height: 17px;
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -80,44 +90,49 @@ body {
     transition: .4s;
     border-radius: 50px;
   }
-
   .toggle-switch-slider:before {
     position: absolute;
-    height: 20px;
-    width: 50px;
+    height: 17px;
+    width: 30px;
     left: 0px;
     bottom: 0px;
     background-color:rgb(120, 120, 120);
     transition: .4s;
     border-radius: 50px;
-    content: "до 35";
+    content: "М";
     font-size: 15px;
     color: white;
     font-weight: 900;
     text-align: center;
   }
-
-
   input:checked + .toggle-switch-slider:before {
-    transform: translateX(29px);
-    content: "35+";
+    transform: translateX(19px);
+    content: "Ж";
   }
+
+
+
   #output{
-    margin-top: 15px;
+    margin: 15px auto 0 auto ;
     border-top: 1px solid white;
-    display: block;
     transition: .5s;
+    text-align: center;
   }
   #points{
-    text-align: center;
     font-weight: 900;
+  }
+  .points{
+    
+    display: block;
+    width: min-content;
+    height: min-content;
+    margin: 30px auto 0 auto;
   }
   #final{
     text-align: center;
     font-weight: 900;
     font-size: 12px;
   }
-  
   #powerpoint,#dexteritypoint,#speedpoint,#staminapoint{
     width: 202px;
     height: 15px;
@@ -135,3 +150,17 @@ body {
     border: 1px solid white;
     border-radius: 0px 0px 5px 5px
   }
+  @media (max-width: 579px) {
+    .points{
+      border: solid 1px rgb(0, 0, 0);
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    }  
+    .option{
+      border: solid 1px rgb(0, 0, 0);
+      padding: 5px;
+      border-radius: 10px;
+      box-shadow: rgb(0, 0, 0) 0px 0px 5px;
+    }
+}
