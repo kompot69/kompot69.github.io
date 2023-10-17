@@ -14,7 +14,7 @@
   <body>
     
   <div class="container">
-    <h2>Подсчёт баллов за физические упражненияя</h2>
+    <h2>Подсчёт баллов за физические упражнения (контр, 3 кат, 1-6 воз.гр, муж (упр.в/ч))</h2>
     <form>
       <div style="display: flex">
       <label for="age">Возраст:</label>
@@ -24,18 +24,23 @@
                 <option value="3">30-34</option>
                 <option value="4">35-39</option>         
                 <option value="5">40-44</option>         
-                <option value="6">45-49</option>         
-                <option value="7">50-54</option>         
-                <option value="8">55-59</option>         
-                <option value="9">60+</option>         
-             </select></div>
+                <option value="6">45-49</option>            
+             </select>
+            
+<div class="toggle-switch" style="display: none;">
+  <input type="checkbox" id="toggle-switch">
+  <label for="toggle-switch" class="toggle-switch-slider"></label>
+</div>
+            </div>
 
              <div class="options">
               <div class="option">
                   <label for="power">Сила:</label>
                   <select id="power">
-                      <option value="1">3.Подтягивания</option>
-                      <option value="2">❌6.ПСнП</option>
+                      <option value="3">3.Подтягивания</option>
+                      <option value="5">❌5.Подъем переворотом</option>
+                      <option value="6">❌6.Подъем силой</option>
+                      <option value="14">❌14.Жим штанги лежа</option>
                   </select>
                   <label for="powerresult">Результат:</label>
                   <input type="text" id="powerresult" placeholder="Введите результат" required>
@@ -43,19 +48,19 @@
               <div class="option">
                   <label for="dexterity">Ловкость:</label>
                   <select id="dexterity">
-                      <option value="2">❌31.Скакалка</option>
-                      <option value="1">32.Бревно</option>
+                      <option value="31">❌31.Скакалка</option>
+                      <option value="32">32.Бревно</option>
                   </select>
                   <label for="dexterityresult">Результат:</label>
                   <input type="text" id="dexterityresult" placeholder="Введите результат" required>
               </div>
       
               <div class="option">
-                  <label for="speed">Скорость:</label>
+                  <label for="speed">Быстрота:</label>
                   <select id="speed">
-                      <option value="2">17.Бег 60м</option>
-                      <option value="3">18.Бег 100м</option>
-                      <option value="4">❌19.ЧБ</option>
+                      <option value="17">17.Бег 60м</option>
+                      <option value="18">18.Бег 100м</option>
+                      <option value="19">❌19.Челночный бег 10х10</option>
                   </select>
                   <label for="speedresult">Результат:</label>
                   <input type="text" id="speedresult" placeholder="Введите результат" required>
@@ -64,8 +69,11 @@
               <div class="option">
                   <label for="stamina">Выносливость:</label>
                   <select id="stamina">
-                      <option value="1">24.Бег 1км</option>
-                      <option value="2">❌24.Б3к</option>
+                      <option value="23">❌23.Бег 400м</option>
+                      <option value="24">24.Бег 1км</option>
+                      <option value="25">❌25.Бег 3км</option>
+                      <option value="28">❌28.Плавание 500м вольным стилем</option>
+                      <option value="29">❌29.Восхождение на платформу</option>
                   </select>
                   <label for="staminaresult">Результат:</label>
                   <input type="text" id="staminaresult" placeholder="Введите результат" required>
@@ -78,15 +86,37 @@
     <div id="output" style="opacity: .0;">
       <p id="points"></p>
       <p id="final"></p>
-      <p id="powerpoint"><p id="powerpoints"></p></p>
-      <p id="dexteritypoint"><p id="dexteritypoints"></p></p>
-      <p id="speedpoint"><p id="speedpoints"></p></p>
-      <p id="staminapoint"><p id="staminapoints"></p></p>
+      <div class="points">
+        <p id="powerpoint"><p id="powerpoints"></p></p>
+        <p id="dexteritypoint"><p id="dexteritypoints"></p></p>
+        <p id="speedpoint"><p id="speedpoints"></p></p>
+        <p id="staminapoint"><p id="staminapoints"></p>
+      </div>
     </div>
   </div>
 
   <script>
+
+    function setup() {
+    window.age = document.getElementById("age").value;
+      switch (age) {
+        case "1": age = 1;
+          break;
+        case "2": age = 2;
+          break;
+        case "3": age = 3;
+          break;
+        case "4": age = 4;
+          break;
+        case "5": age = 5;
+          break;
+        case "6": age = 6;
+          break;
+      }
+    }
+
     function calculatePoints() {
+      setup();
       var power = document.getElementById("power").value;
       var dexterity = document.getElementById("dexterity").value;
       var speed = document.getElementById("speed").value;
@@ -99,101 +129,174 @@
 
       // Таблица подсчета баллов
       switch (power) {
-        case "1":
-          powerpoints = podt(powerresult.replace(",", "."));
-          points += powerpoints;
-          break;
-        case "2":
-          powerpoints = podt(powerresult.replace(",", "."));
-          points += powerpoints;
-          break;
         case "3":
           powerpoints = podt(powerresult.replace(",", "."));
           points += powerpoints;
           break;
-        case "4":
-          powerpoints = podt(powerresult.replace(",", "."));
-          points += powerpoints;
+        case "5":
+          //powerpoints = podt(powerresult.replace(",", "."));
+          //points += powerpoints;
+          break;
+        case "6":
+          //powerpoints = podt(powerresult.replace(",", "."));
+          //points += powerpoints;
+          break;
+        case "10":
+          //powerpoints = podt(powerresult.replace(",", "."));
+          //points += powerpoints;
           break;
       }
       switch (dexterity) {
-        case "1":
+        case "31":
+         //dexteritypoints = skakalka(dexterityresult.replace(",", "."));
+          //points += dexteritypoints;
+          break;
+        case "32":
         dexteritypoints = brevno(dexterityresult.replace(",", "."));
           points += dexteritypoints;
           break;
-        case "2":
-        dexteritypoints = podt(dexterityresult.replace(",", "."));
-          points += dexteritypoints;
-          break;
-        case "3":
-        dexteritypoints = podt(dexterityresult.replace(",", "."));
-          points += dexteritypoints;
-          break;
-        case "4":
-        dexteritypoints = podt(dexterityresult.replace(",", "."));
-          points += powerpodexteritypointsints;
-          break;
       }
       switch (speed) {
-        case "1":
-          speedpoints = brevno(speedresult.replace(",", "."));
-          points += speedpoints;
-          break;
-        case "2":
+        case "17":
           speedpoints = beg60m(speedresult.replace(",", "."));
           points += speedpoints;
           break;
-        case "3":
+        case "18":
           speedpoints = beg100m(speedresult.replace(",", "."));
           points += speedpoints;
           break;
-        case "4":
-          speedpoints = brevno(speedresult.replace(",", "."));
-          points += speedpoints;
+        case "19":
+          //speedpoints = beg10x10(speedresult.replace(",", "."));
+          //points += speedpoints;
           break;
       }
       switch (stamina) {
-        case "1":
+        case "24":
           staminapoints = beg1km(staminaresult.replace(",", "."));
           points += staminapoints;
           break;
-        case "2":
-          staminapoints = podt(staminaresult.replace(",", "."));
-          points += staminapoints;
-          break;
-        case "3":
-          staminapoints = podt(staminaresult).replace(",", ".");
-          points += staminapoints;
-          break;
-        case "4":
-          staminapoints = podt(staminaresult.replace(",", "."));
-          points += staminapoints;
+        case "25":
+          //staminapoints = podt(staminaresult.replace(",", "."));
+          //points += staminapoints;
           break;
       }
-
-      document.getElementById("points").textContent = "Вы заработали " + points + " баллов.";
-      document.getElementById("final").textContent = "(тест!) Ваша оценка: " + final(points);
-      document.getElementById("powerpoint").textContent = "Сила: " + powerpoints + " б.";
-      document.getElementById("powerpoints").style.width=powerpoints*2+"px";
-      document.getElementById("dexteritypoint").textContent = "Ловкость: " + dexteritypoints + " б.";
-      document.getElementById("dexteritypoints").style.width=dexteritypoints*2+"px";
-      document.getElementById("speedpoint").textContent = "Скорость: " + speedpoints + " б.";
-      document.getElementById("speedpoints").style.width=speedpoints*2+"px";
-      document.getElementById("staminapoint").textContent = "Выносливость: " + staminapoints + " б.";
-      document.getElementById("staminapoints").style.width=staminapoints*2+"px";
       document.getElementById("output").style.opacity = "1";
+      elPP=document.getElementById("powerpoint")
+      elPPs=document.getElementById("powerpoints")
+      elDP=document.getElementById("dexteritypoint")
+      elDPs=document.getElementById("dexteritypoints")
+      elSP=document.getElementById("speedpoint")
+      elSPs=document.getElementById("speedpoints")
+      elStP=document.getElementById("staminapoint")
+      elStPs=document.getElementById("staminapoints")
+      document.getElementById("points").textContent = "Вы заработали " + points + " баллов.";
+      document.getElementById("final").textContent = "Ваша оценка: " + final(points);
+      elPP.textContent = "Сила: " + powerpoints + " б.";
+      elPPs.style.width=powerpoints*2+"px";
+      elDP.textContent = "Ловкость: " + dexteritypoints + " б.";
+      elDPs.style.width=dexteritypoints*2+"px";
+      elSP.textContent = "Быстрота: " + speedpoints + " б.";
+      elSPs.style.width=speedpoints*2+"px";
+      elStP.textContent = "Выносливость: " + staminapoints + " б.";
+      elStPs.style.width=staminapoints*2+"px";
+      if (dexteritypoints>0 && speedpoints==0){elSPs.style.opacity = ".1";elSP.style.opacity = ".1";}
+      else if (speedpoints>0 && dexteritypoints==0){elDPs.style.opacity = ".1";elDP.style.opacity = ".1";}
+      else {elSPs.style.opacity = "1";elSP.style.opacity = "1";elDPs.style.opacity = "1";elDP.style.opacity = "1";}
+      if (age==1){
+        if(powerpoints<30){elPP.style.color="red";setTimeout(function() {elPP.style.color="white";}, 5000);}
+        if(dexteritypoints+speedpoints<30){elDP.style.color="red";elSP.style.color="red";setTimeout(function() {elDP.style.color="white";elSP.style.color="white";}, 5000);}
+        if(staminapoints<30){elStP.style.color="red";setTimeout(function() {elStP.style.color="white";}, 3000);}
+      }
+      if (age==2){
+        if(powerpoints<28){elPP.style.color="red";setTimeout(function() {elPP.style.color="white";}, 5000);}
+        if(dexteritypoints+speedpoints<28){elDP.style.color="red";elSP.style.color="red";setTimeout(function() {elDP.style.color="white";elSP.style.color="white";}, 5000);}
+        if(staminapoints<28){elStP.style.color="red";setTimeout(function() {elStP.style.color="white";}, 5000);}
+      }
+      if (age==3){
+        if(powerpoints<26){elPP.style.color="red";setTimeout(function() {elPP.style.color="white";}, 5000);}
+        if(dexteritypoints+speedpoints<26){elDP.style.color="red";elSP.style.color="red";setTimeout(function() {elDP.style.color="white";elSP.style.color="white";}, 5000);}
+        if(staminapoints<26){elStP.style.color="red";setTimeout(function() {elStP.style.color="white";}, 5000);}
+      }
+      if (age==4){
+        if(powerpoints<22){elPP.style.color="red";setTimeout(function() {elPP.style.color="white";}, 5000);}
+        if(dexteritypoints+speedpoints<22){elDP.style.color="red";elSP.style.color="red";setTimeout(function() {elDP.style.color="white";elSP.style.color="white";}, 5000);}
+        if(staminapoints<22){elStP.style.color="red";setTimeout(function() {elStP.style.color="white";}, 5000);}
+      }
+      if (age==5){
+        if(powerpoints<20){elPP.style.color="red";setTimeout(function() {elPP.style.color="white";}, 5000);}
+        if(dexteritypoints+speedpoints<20){elDP.style.color="red";elSP.style.color="red";setTimeout(function() {elDP.style.color="white";elSP.style.color="white";}, 5000);}
+        if(staminapoints<20){elStP.style.color="red";setTimeout(function() {elStP.style.color="white";}, 5000);}
+      }
+      if (age==6){
+        if(powerpoints<16){elPP.style.color="red";setTimeout(function() {elPP.style.color="white";}, 5000);}
+        if(dexteritypoints+speedpoints<16){elDP.style.color="red";elSP.style.color="red";setTimeout(function() {elDP.style.color="white";elSP.style.color="white";}, 5000);}
+        if(staminapoints<16){elStP.style.color="red";setTimeout(function() {elStP.style.color="white";}, 5000);}
+      }
     }
-    function final(result) {
-      elem=document.getElementById("final")
-      if (result==""){return elem.style.opacity=".0";}
-      else if (result==0){return elem.style.opacity=".0";}
-      else if (result>=230){elem.style.opacity="1";elem.style.color="greenyellow";return "Высшая категория";}
-      else if (result>=210){elem.style.opacity="1";elem.style.color="greenyellow";return "1 кв. ур.";}
-      else if (result>=200){elem.style.opacity="1";elem.style.color="greenyellow";return "2 кв. ур.";}
-      else if (result>=190){elem.style.opacity="1";elem.style.color="limegreen";return "3 кв. ур. (отлично)";}
-      else if (result>=170){elem.style.opacity="1";elem.style.color="green";return "хорошо";}
-      else if (result>=120){elem.style.opacity="1";elem.style.color="orange";return "удовл.";}
-      else {elem.style.opacity="1";elem.style.color="red";return "неудовл.";}
+    function final(points) {
+      setup();
+      elem=document.getElementById("final");
+      if (points==0){return "-"}
+      else if (age==1){
+        if(points>=230){return "Высшая категория"}
+        else if(points>=210){return "1 кв. ур."}
+        else if(points>=200){return "2 кв. ур."}
+        else if(points>=190){return "отлично (3 кв. ур. )"}
+        else if(points>=170){return "хорошо"}
+        else if(points>=120){return "удовл."}
+        else {return "неудовл."}
+      }
+      else if (age==2){
+        //if(points>=230){return "Высшая категория"}
+        //else if(points>=210){return "1 кв. ур."}
+        //else if(points>=200){return "2 кв. ур."}
+        //else 
+        if(points>=180){return "отлично (3 кв. ур. )"}
+        else if(points>=160){return "хорошо"}
+        else if(points>=110){return "удовл."}
+        else {return "неудовл."}
+      }
+      else if (age==3){
+        //if(points>=230){return "Высшая категория"}
+        //else if(points>=210){return "1 кв. ур."}
+        //else if(points>=200){return "2 кв. ур."}
+        //else 
+        if(points>=170){return "отлично (3 кв. ур. )"}
+        else if(points>=150){return "хорошо"}
+        else if(points>=100){return "удовл."}
+        else {return "неудовл."}
+      }
+      else if (age==4){
+        //if(points>=230){return "Высшая категория"}
+        //else if(points>=210){return "1 кв. ур."}
+        //else if(points>=200){return "2 кв. ур."}
+        //else 
+        if(points>=150){return "отлично (3 кв. ур. )"}
+        else if(points>=130){return "хорошо"}
+        else if(points>=80){return "удовл."}
+        else {return "неудовл."}
+      }
+      else if (age==5){
+        //if(points>=230){return "Высшая категория"}
+        //else if(points>=210){return "1 кв. ур."}
+        //else if(points>=200){return "2 кв. ур."}
+        //else 
+        if(points>=130){return "отлично (3 кв. ур. )"}
+        else if(points>=110){return "хорошо"}
+        else if(points>=70){return "удовл."}
+        else {return "неудовл."}
+      }
+      else if (age==6){
+        //if(points>=230){return "Высшая категория"}
+        //else if(points>=210){return "1 кв. ур."}
+        //else if(points>=200){return "2 кв. ур."}
+        //else 
+        if(points>=100){return "отлично (3 кв. ур. )"}
+        else if(points>=80){return "хорошо"}
+        else if(points>=60){return "удовл."}
+        else {return "неудовл."}
+      }
+
     }
     // Функции подсчета баллов для каждого упражнения
     function podt(result) {//подтягивания
@@ -257,29 +360,7 @@
     }
 
     function beg1km(result) { //бег1км
-       
-    var age = document.getElementById("age").value;
-      switch (age) {
-        case "1": age = 1;
-          break;
-        case "2": age = 2;
-          break;
-        case "3": age = 3;
-          break;
-        case "4": age = 4;
-          break;
-        case "5": age = 5;
-          break;
-        case "6": age = 6;
-          break;
-        case "7": age = 7;
-          break;
-        case "8": age = 8;
-          break;
-        case "9": age = 9;
-          break;
-      }
-
+      setup();
         if (age>3) {//35+
             if (result==""){return 0;}
             else if(result<=3.25){return 100;}
@@ -448,29 +529,7 @@
         }      
     }
     function beg60m(result) { //бег60
-      
-    var age = document.getElementById("age").value;
-      switch (age) {
-        case "1": age = 1;
-          break;
-        case "2": age = 2;
-          break;
-        case "3": age = 3;
-          break;
-        case "4": age = 4;
-          break;
-        case "5": age = 5;
-          break;
-        case "6": age = 6;
-          break;
-        case "7": age = 7;
-          break;
-        case "8": age = 8;
-          break;
-        case "9": age = 9;
-          break;
-      }
-
+      setup();
         if (age>3) {//35+
             if (result==""){return 0;}
             else if(result<=8.0){return 100;}
@@ -563,28 +622,7 @@
         }
     }
     function beg100m(result) { 
-    var age = document.getElementById("age").value;
-      switch (age) {
-        case "1": age = 1;
-          break;
-        case "2": age = 2;
-          break;
-        case "3": age = 3;
-          break;
-        case "4": age = 4;
-          break;
-        case "5": age = 5;
-          break;
-        case "6": age = 6;
-          break;
-        case "7": age = 7;
-          break;
-        case "8": age = 8;
-          break;
-        case "9": age = 9;
-          break;
-      }
-      
+      setup();
         if (age>3) {//35+
             if (result==""){return 0;}
             else if(result<=13.0){return 100;}
