@@ -49,7 +49,7 @@
       </div>
             
 <div class="toggle-switch" style="display: none;">
-  <input type="checkbox" id="toggle-switch">
+  <input type="checkbox" id="toggle-switch" >
   <label for="toggle-switch" class="toggle-switch-slider"></label>
 </div>
 
@@ -68,7 +68,7 @@
               <div class="option">
                   <label for="dexterity">Ловкость:</label>
                   <select id="dexterity">
-                      <!--<option value="31">❌31.Скакалка</option>-->
+                      <option value="31">31.Скакалка</option>
                       <option value="32">32.Бревно</option>
                   </select>
                   <label for="dexterityresult">Результат:</label>
@@ -118,7 +118,8 @@
   <script>
 
     function setup() {
-    window.age = document.getElementById("age").value;
+      window.ifWoman = document.getElementById('toggle-switch').checked
+      window.age = document.getElementById("age").value;
       switch (age) {
         case "1": age = 1;
           break;
@@ -168,8 +169,8 @@
       }
       switch (dexterity) {
         case "31":
-         //dexteritypoints = skakalka(dexterityresult.replace(",", "."));
-          //points += dexteritypoints;
+          dexteritypoints = skakalka(dexterityresult.replace(",", "."));
+          points += dexteritypoints;
           break;
         case "32":
         dexteritypoints = brevno(dexterityresult.replace(",", "."));
@@ -346,6 +347,110 @@
         else if(result>=3){return 22;}
         else if(result>=2){return 16;}
         else if(result>=1){return 8;}
+        else {return 0;}      
+    }
+    function skakalka(result) {
+        if (result==""){return 0;}
+        else if(result>=180){return 100;}
+        else if(result>=179){return 99;}
+        else if(result>=178){return 98;}
+        else if(result>=177){return 97;}
+        else if(result>=176){return 96;}
+        else if(result>=175){return 95;}
+        else if(result>=174){return 94;}
+        else if(result>=173){return 93;}
+        else if(result>=172){return 92;}
+        else if(result>=171){return 91;}
+        else if(result>=170){return 90;}
+        else if(result>=169){return 89;}
+        else if(result>=168){return 88;}
+        else if(result>=167){return 87;}
+        else if(result>=166){return 86;}
+        else if(result>=165){return 85;}
+        else if(result>=164){return 84;}
+        else if(result>=163){return 83;}
+        else if(result>=162){return 82;}
+        else if(result>=161){return 81;}
+        else if(result>=160){return 80;}
+        else if(result>=159){return 79;}
+        else if(result>=158){return 78;}
+        else if(result>=157){return 77;}
+        else if(result>=156){return 76;}
+        else if(result>=155){return 75;}
+        else if(result>=154){return 74;}
+        else if(result>=153){return 73;}
+        else if(result>=152){return 72;}
+        else if(result>=151){return 71;}
+        else if(result>=150){return 70;}
+        else if(result>=149){return 69;}
+        else if(result>=148){return 68;}
+        else if(result>=147){return 67;}
+        else if(result>=146){return 66;}
+        else if(result>=145){return 65;}
+        else if(result>=144){return 64;}
+        else if(result>=143){return 63;}
+        else if(result>=142){return 62;}
+        else if(result>=141){return 61;}
+        else if(result>=140){return 60;}
+        else if(result>=139){return 59;}
+        else if(result>=138){return 58;}
+        else if(result>=137){return 57;}
+        else if(result>=136){return 56;}
+        else if(result>=135){return 55;}
+        else if(result>=134){return 54;}
+        else if(result>=133){return 53;}
+        else if(result>=132){return 52;}
+        else if(result>=131){return 51;}
+        else if(result>=130){return 50;}
+        else if(result>=129){return 49;}
+        else if(result>=128){return 48;}
+        else if(result>=127){return 47;}
+        else if(result>=126){return 46;}
+        else if(result>=125){return 45;}
+        else if(result>=124){return 44;}
+        else if(result>=123){return 43;}
+        else if(result>=122){return 42;}
+        else if(result>=121){return 41;}
+        else if(result>=120){return 40;}
+        else if(result>=119){return 39;}
+        else if(result>=118){return 38;}
+        else if(result>=117){return 37;}
+        else if(result>=116){return 36;}
+        else if(result>=115){return 35;}
+        else if(result>=114){return 34;}
+        else if(result>=113){return 33;}
+        else if(result>=112){return 32;}
+        else if(result>=111){return 31;}
+        else if(result>=110){return 30;}
+        else if(result>=109){return 29;}
+        else if(result>=108){return 28;}
+        else if(result>=107){return 27;}
+        else if(result>=106){return 26;}
+        else if(result>=105){return 25;}
+        else if(result>=104){return 24;}
+        else if(result>=103){return 23;}
+        else if(result>=102){return 22;}
+        else if(result>=101){return 21;}
+        else if(result>=100){return 20;}
+        else if(result>=99){return 19;}
+        else if(result>=98){return 18;}
+        else if(result>=97){return 17;}
+        else if(result>=96){return 16;}
+        else if(result>=95){return 15;}
+        else if(result>=94){return 14;}
+        else if(result>=93){return 13;}
+        else if(result>=92){return 12;}
+        else if(result>=91){return 11;}
+        else if(result>=90){return 10;}
+        else if(result>=89){return 9;}
+        else if(result>=88){return 8;}
+        else if(result>=87){return 7;}
+        else if(result>=86){return 6;}
+        else if(result>=85){return 5;}
+        else if(result>=84){return 4;}
+        else if(result>=83){return 3;}
+        else if(result>=82){return 2;}
+        else if(result>=81){return 1;}
         else {return 0;}      
     }
     
