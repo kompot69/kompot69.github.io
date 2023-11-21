@@ -50,7 +50,9 @@ body {
 }
 .v{
     display: block;
+    color: white;
     margin: auto;
+    height: 15px;
     padding: 5px 12px;
     max-width: fit-content;
     border: 1px solid rgb(77, 77, 77);
@@ -59,6 +61,9 @@ body {
 }
 .v::before{
     content: "v. ";
+}
+.v:hover{
+    box-shadow: rgb(71, 45, 71) 0px 0px 15px;
 }
 .mod-link{
     border: 1px solid rgb(77, 77, 77);
