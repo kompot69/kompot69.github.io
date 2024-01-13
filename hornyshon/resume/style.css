@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "Main";
+    font-style: normal;
+    font-weight: 300;
+    src: url("fonts/v_DesignerGenesRegular_v1.0.woff2") format("woff2"), url("fonts/v_DesignerGenesRegular_v1.0.woff") format("woff");
+  }
+@font-face {
+	font-family: 'Minecraft';
+	src: url('fonts/v_07x5_v1.0.woff2') format('woff2'), url('fonts/v_07x5_v1.0.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+body{
+    background-color: black;
+    color: rgb(0, 255, 0);
+    font-family: "Main";
+}
+.resume::before, .resume::after{
+    content: "";
+    display: block;
+    border-top: 3px solid rgb(0, 255, 0);
+    margin: 20px auto;
+}
+.resume{
+    max-width: 800px;
+    margin: auto;
+}
+.top{
+    display: flex;
+}
+.top img{
+    max-height: 300px;
+    max-width: 300px;
+    border: 3px solid rgb(0, 255, 0);
+    border-radius: 0 0 60px 0;
+}
+.top div{
+    margin-left: 40px;
+}
+.top-list p, .top h3{
+    direction: rtl;
+    margin: auto 0;
+}
+.top-list li{
+    text-decoration: underline;
+}
+.top-list li::marker{
+}
+.middle{
+    margin: 40px auto;
+}
+.middle p{
+    font-family: "Minecraft";
+    font-size: 20px;
+}
+.middle p::after{
+    content: "progress";
+    float: right;
+    width: 50%;
+    height: 12px;
+    display: inline-block;
+    border: 3px solid rgb(0, 255, 0);
+}
+.bottom p{
+    font-family: "Minecraft";
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.gallery{
+    height: 192px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    border: 3px solid rgb(0, 255, 0);
+    border-right: 3px solid rgb(0, 255, 0);
+}
+.gallery::-webkit-scrollbar {
+    height: 10px;
+    
+}
+.gallery::-webkit-scrollbar-thumb {
+    margin: 1px;
+    background: radial-gradient(circle, rgba(0,255,0,1) 0%, rgba(0,200,0,1) 99%, rgba(0,0,0,1) 100%);
+    filter: blur(1.5rem);
+}
+.gallery img{
+    height: 180px;
+    border-right: 3px solid rgb(0, 255, 0);
+    border-bottom: 3px solid rgb(0, 255, 0);
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+.gallery img:hover{
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+@media (max-width: 760px) {
+    body{
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    .top img{
+        width: 250px;
+        height: 250px;
+    }
+    .top div{
+        margin-left: 20px;
+    }
+}
+@media (max-width: 690px) {
+    .top{
+        display: block;
+    }
+    .top img{
+        display: block;
+        margin: 10px auto;
+    }
+    .top h3{
+        text-align: center;
+    }
+    .top-list{
+        margin-left: 0;
+        margin-top: 25px;
+    }
+}
