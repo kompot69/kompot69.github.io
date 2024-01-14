@@ -6,13 +6,16 @@
     <title>Резюме Hornyshon</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/logo.png" type="image/jpg" />
+    <script src="./script.js"></script>
   </head>
  
   <body class="body">    
     <div class="resume">
 
+        <img src="img/eff_1.png" alt="" id="eff_1">
+
         <div class="top">
-            <img src="img/photo.jpg" alt="">
+            <img src="img/photo.jpg" alt="" id="123">
             <div>
                 <h3>Полянская Алина Марсовна 19 лет</h3>
                 <ul class="top-list">
@@ -40,30 +43,21 @@
         <div class="bottom">
             <h3>ПРИМЕРЫ РАБОТ:</h3>
             <p>Иллюстрации</p>
-            <div class="gallery">
-                <img src="img/illustration/1.png" alt="">
-                <img src="img/illustration/2.png" alt="">
-                <img src="img/illustration/3.jpg" alt="">
-                <img src="img/illustration/4.jpg" alt="">
-                <img src="img/illustration/5.jpg" alt="">
-                <img src="img/illustration/6.jpg" alt="">
-                <img src="img/illustration/7.jpg" alt="">
-                <img src="img/illustration/8.jpg" alt="">
-                <img src="img/illustration/9.jpg" alt="">
-                <img src="img/illustration/10.jpg" alt="">
-                <img src="img/illustration/11.jpg" alt="">
-                <img src="img/illustration/12.jpg" alt="">
-                <img src="img/illustration/13.jpg" alt="">
-            </div>
+            <div class="gallery" id="illustrations"></div>
             <p>Комиксы</p>
-            <div class="gallery">
-                <img src="img/comiс/1.jpg" alt="">
-                <img src="img/comiс/2.jpg" alt="">
-                <img src="img/comiс/3.jpg" alt="">
-                <img src="img/comiс/2.jpg" alt="">
-            </div>
+            <div class="gallery" id="comics"></div>
         </div>
+        
+        <p>TODO: <br> раскрытие фото <br> прогресс-бары  <br> эффекты с анимацией  <br>  
+        </p>
+
+        <video id="background-video" autoplay loop muted >
+            <source src="img/bg.mp4" type="video/mp4">
+          </video>
 
     </div>
   </body>
+  <script>
+    window.onload = main()
+  </script>
 </html>
