@@ -13,9 +13,10 @@ header{
     margin: 0;
 }
 .photo{
-    border: 1px solid rgba(0, 0, 255, 0);
+    margin-top: 20px;
     border-radius: 55px;
-    padding: 10px;
+    height: 100px;
+    width: 100px;
     -webkit-transition: all 500ms;
     transition: all 500ms;
 }
