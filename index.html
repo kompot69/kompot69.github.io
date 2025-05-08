@@ -13,44 +13,52 @@
   </head>
 
   <body>
+    <script defer> window.addEventListener('load', function() { document.getElementById('splash-screen').remove(); }); </script>
+    <div id="splash-screen" style="display: none;"> <img id="splash-screen-logo" src="img/Klogo-512-red.png" ></img> </div>
+
     <header>
       <img src="img/Klogo-512-red.png" alt="kitty" class="photo">
       <h1 class="title">Kompot_69</h1>
     </header>
+    
     <div class="container">
+
       <p class="category">Проекты</p>
-      <a href="bots">
-        <p id="red-filled-right" class="link-large">Боты VK & Telegram</p>
-      </a>
-      <a href="minecraft">
-        <p id="red-filled-right" class="link-large">Сервера Minecraft (PE)</p>
-      </a>
-      <a href="https://github.com/kompot69/FTG-Modules" target="_blank">
-        <p id="red-filled-newtab" class="link-large">Модули FTG</p>
-      </a>
-      <a href="https://github.com/kompot69/yotahotspot/releases" target="_blank">
-        <p id="red-filled-newtab" class="link-large">Приложение Роутер YOTA</p>
-      </a>
+      <div class="link-container bots">
+        <button class="link-container-button" onclick="content_show('bots')">Боты VK & Telegram</button>
+        <div class="link-container-content">
+          <a class="link-container-link" href="bots/ptpit_timetable_bot" >PTPIT Timetable Bot (VK & Telegram)</a>
+          <a class="link-container-link" href="bots/messages_mirror_bot/index.html" style="display: none;">Messages Mirror Bot</a>
+          <a class="link-container-link" href="#" style="display: none;">Handshaker</a>
+          <a class="link-container-link" href="#" style="display: none;">Baseholder</a>
+        </div>
+      </div>
+      <a class="link" href="https://github.com/kompot69/FTG-Modules" target="_blank">Модули FTG</a>
+      <a class="link" href="minecraft">Сервера Minecraft</a>
+      <a class="link" href="https://github.com/kompot69/yotahotspot/releases" target="_blank">Приложение Роутер YOTA</a>
+      <p class="category" style="display: none;">Другое</p>
+      <a class="link" href="https://kali-nh.github.io" target="_blank" style="display: none;">NetHunter For You Site</a>
+      <a class="link" href="https://github.com/kompot69/yotahotspot/releases" target="_blank" style="display: none;">Hornishon</a>
+
       <p class="category">Контакты</p>
-      <a href="https://t.me/kompot_69" target="_blank">
-        <p id="gray-newtab" class="link-large">Telegram</p>
-      </a>
-      <a href="https://github.com/kompot69" target="_blank">
-        <p id="gray-newtab" class="link-large">GitHub</p>
-      </a>
-      <a href="https://4pda.to/forum/index.php?showuser=7945743" target="_blank">
-        <p id="gray-newtab" class="link-large">4PDA</p>
-      </a>
-      <p class="category">Другое</p>
-      <a href="https://kali-nh.github.io" target="_blank">
-        <p id="gray-newtab" class="link-small">NetHunter For You Site</p>
-      </a>
-      <a href="#" style:"display:none;">
-        <p class="link-small">hs(будет позже)</p>
-      </a>
-      <a href="old">
-        <p class="link-small">старые версии сайта</p>
-      </a>
+      <a class="link contact" href="https://t.me/kompot_69" target="_blank">Telegram</a>
+      <a class="link contact" href="https://github.com/kompot69" target="_blank">GitHub</a>
+      <a class="link contact" href="https://4pda.to/forum/index.php?showuser=7945743" target="_blank">4PDA</a>
+
     </div>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('hide') === 'show') {
+        document.querySelectorAll('[style*="display"]').forEach(el => {
+          if (el.style.display === 'none') { el.style.removeProperty('display'); }
+        });
+      }
+      function content_show(id) {
+        const container = document.querySelector('.link-container.'+id);
+        container.classList.toggle('open');
+        container.querySelector('.link-container-content').classList.toggle('open');
+        container.querySelector('.link-container-button').classList.toggle('open');
+      }
+    </script>
   </body>
 </html>
