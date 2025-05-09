@@ -8,8 +8,8 @@ header{
     text-align: center;
 }
 .title{
-    color: rgb(150, 0, 0);
-    opacity: 29%;
+    color: rgb(255, 255, 255);
+    opacity: 90%;
     margin: 0;
 }
 .photo{
@@ -20,25 +20,16 @@ header{
     -webkit-transition: all 500ms;
     transition: all 500ms;
 }
-.header:hover .photo{
-    border-radius: 80px;
-    padding: 0px;
-    margin: 10px;
-    border: 1px solid rgb(150, 0, 0);
-    box-shadow: rgb(150, 0, 0) 0px 0px 150px;
-    transform: scale(0.9);
-}
 .container{
     padding: 20px;
     margin: auto;
     max-width: 500px; 
 }
-a{ text-decoration:none; color:white; }
-button{ font-family:"Comfortaa",cursive; color:white; background-color:transparent; border:none; cursor:pointer; }
+a{ text-decoration:none; color:white; -webkit-tap-highlight-color: transparent;}
+button{ font-family:"Comfortaa",cursive; color:white; background-color:transparent; border:none; cursor:pointer; -webkit-tap-highlight-color: transparent;}
 
 /* splash */
-
-#splash-screen {
+.splash-screen {
     position: fixed;
     top: 0;
     left: 0;
@@ -48,45 +39,27 @@ button{ font-family:"Comfortaa",cursive; color:white; background-color:transpare
     align-items: center;
     justify-content: center;
     z-index: 9999;
+    background-color: #141218;
+    transition: opacity 1s ease;
+    opacity: 1;
   }  
-  #splash-screen-logo {
+.splash-screen-logo {
     width: 10rem;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     animation: fadeIn 0.75s ease forwards;
   }
-  
-  /* Определение анимации для плавного появления элемента */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+.splash-screen.open { 
+      opacity: 0;
+      height: 0%;
+      -webkit-transition: all 500ms;
+      transition: all 500ms;
   }
-  
-  /* Цвет для светлой темы */
-  html.mdui-theme-light #splash-screen {
-    background-color: rgb(254, 247, 255);
-  }
-  
-  /* Цвет для тёмной темы */
-  html.mdui-theme-dark #splash-screen {
-    background-color: rgb(20, 18, 24);
-  }
-  
-  /* Цвет для автоматической темы, с учётом системных настроек */
-  html.mdui-theme-auto #splash-screen {
-    background-color: rgb(254, 247, 255);
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    html.mdui-theme-auto #splash-screen {
-      background-color: rgb(20, 18, 24);
-    }
-  }
-
   
 .category{
-    color: rgb(150, 0, 0);
-    font-weight: 200;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
     text-align: center;
     margin-bottom: 0;
     margin-top: 30px;
@@ -99,7 +72,7 @@ button{ font-family:"Comfortaa",cursive; color:white; background-color:transpare
 }
 .link-container:hover { box-shadow: rgb(77, 77, 77) 0px 0px 25px; }
 .link-container.open:hover { box-shadow: rgba(77, 77, 77, 0.4) 0px 0px 25px; }
-.link-container-button.open { background-color: #ffffff44; }
+.link-container-button.open { background-color: #ffffff44; font-weight: 600;}
 
 /* ссылки (не в контейнерах) (+ кнопки контейнера) */
 .link, .link-container{
@@ -114,6 +87,7 @@ button{ font-family:"Comfortaa",cursive; color:white; background-color:transpare
 .link, .link-container-link {
     display: block;
     padding: 10px;
+    height: 18px;
     text-align: center;
     -webkit-transition: all 500ms;
     transition: all 500ms;
@@ -139,8 +113,6 @@ button{ font-family:"Comfortaa",cursive; color:white; background-color:transpare
     -webkit-transition: all 500ms;
     transition: all 500ms;
 }
-
-
 /* АААААААААААААААААААААА ПААРАША ГОВНОКОД АХТУГ АХТУНГ ГИТЛЕР КАПУТ БЛТЯЬ */
 #gray-right{
     background-image:linear-gradient(
