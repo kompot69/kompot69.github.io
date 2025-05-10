@@ -1,0 +1,257 @@
+body {
+  background-color: #c6e2ff;
+  color: rgb(0, 0, 0);
+  margin: 0;
+  font-family: "Raleway", cursive;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 90%, rgba(0,0,0,0) 100%);
+  height: 50px;
+}
+.pagename{
+  text-align: center;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+.pagename:hover::after{
+  opacity: 100;
+}
+.pagename::after{
+  content: "";
+  width: 45px;
+  height: 45px;
+  top: 20px;
+  left: 67px;
+  position: absolute;
+  background-repeat: repeat-x;
+  background-image: url(poop.png);
+  background-size: 15px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+}
+.themecontainer::before{
+  content: "";
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 45px;
+  height: 45px;
+  background-image: url(poop.png);
+  background-size: 45px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.themecontainer{
+  width: 45px;
+  height: 45px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  justify-content: space-between;
+  display: flex;
+}
+.themecontainer:hover::before{
+  transform: rotate(-140deg);
+  opacity: 0;
+}
+.themecontainer:hover .toggle-button{
+  opacity: 100;
+}
+.themecontainer:hover{
+  width: 100px;
+}
+.colorpicker{
+  width: 45px;
+  height: 45px;
+}
+.toggle-button {
+  opacity: 0;
+  position: relative;
+  width: 40px;
+  height: 22px;
+  margin: 16px 10px 5px 5px;
+  background: #00000000;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+ }
+  
+.toggle-button::before {
+  content: "DARK";
+  font-weight: 700;
+  font-size: 10px;
+  position: absolute;
+  bottom: 22px;
+  left: 4px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.toggle-button::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 18px;
+  background-color: #000000;
+  border-radius: 50%;
+  transform: translateX(0);
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.toggle-button:hover::after{
+  transform: scale(0.8);
+}
+.toggle-button:checked::before{
+  color: rgb(132, 0, 255);
+}
+.toggle-button:checked::after {
+  transform: translateX(100%);
+  background-color: rgb(132, 0, 255);
+}
+.toggle-button:checked:hover::after{
+  transform: translateX(100%) scale(0.8);
+}
+.toggle-button:checked {
+  border: 1px solid rgb(132, 0, 255);
+}
+.section_name{
+  text-align: center;
+  margin: 30px 0px 10px 0px;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+.section_name:hover{
+  content: none;
+  color: aqua;
+  transform: rotate(500deg) scaleY(5) scaleX(2) translateX(100px);
+  background-color: rgb(255, 0, 0);
+  font-weight: 500;
+}
+.section_name:hover::before{
+  content: "блять ";
+  font-weight: 100;
+}
+.section_name:hover::after{
+  content: " ахуеть";
+  font-weight: 900;
+}
+.photoscontainer{
+  display: block;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.hel{
+  height: 200px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+.hel:hover{
+  transform: rotate(2550deg) scaleY(7) scaleX(2) translateX(200px);
+}
+.hel2{
+  height: 200px;
+  -webkit-transition: all 2s;
+  transition: all 3s;
+}
+.hel2:hover{
+  transform: rotate(20000000000000000000000000000000000000deg) scaleY(2) scaleX(5);
+}
+.planecontainer::before{
+  font-weight: normal;
+  content: "вернули";
+  position: absolute;
+  color: #00000000;
+  margin-top: 4px;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+.planecontainer{
+  background-color: rgb(255, 0, 0);
+  width: 50px;
+  height: 25px;
+  font-weight: 900;
+  font-size: 16px;
+  position:absolute;
+  padding-left: 10px;
+  z-index: 2;
+  margin-top: 20px;
+  border-radius: 0px 15px 15px 0px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.planecontainer p{
+  margin: 5px;
+  color: #000000;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+.planecontainer:hover{
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 15px red;
+  width: 80px;
+  height: 70px;
+}
+.planecontainer:hover p{
+  transform: rotate(1250deg) translateX(120px);
+}
+.planecontainer:hover::before{
+  content: "спиздили";
+  color: #000000;
+  border-bottom: 1px dotted red;
+  padding-bottom: 3px;
+}
+.planecontainer:after{
+  content: "запускаю хуелёт...";
+  color: #00000000;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-weight: normal;
+}
+.planecontainer:hover::after{
+  color: #ff0000;
+  font-weight: 500;
+}
+.pl{
+  background-image: url(plane.png);
+  background-size: cover;
+  height: 200px;
+  width: 430px;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  z-index: 1;
+}
+.planecontainer:hover ~ .pl{
+  margin-left: 900px;
+  border-radius: 100% 30% 100% 100%;
+  height: 170px;
+  box-shadow: inset 0px 0px 25px royalblue;
+  transform: rotateY(66000000deg) rotate(9000deg) translateY(-220px) skew(900000000deg);
+}
+.pl::after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-image: url(poop.png);
+  background-size: 50px;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+  opacity: 0;
+}
+.planecontainer:hover ~ .pl::after{
+  width: 400px;
+  transform: translateY(500px) rotateX(300deg);
+  opacity: 100;
+}
