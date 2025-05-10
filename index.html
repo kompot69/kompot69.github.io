@@ -9,8 +9,8 @@
     />
     <title>Kompot_69</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="/img/logo.ico" type="image/jpg" />
-    <link rel="preload" as="image" href="img/Klogo-512-red.png" fetchpriority="high">
+    <link rel="shortcut icon" href="/img/Klogo-32-red.ico" type="image/jpg" />
+    <link rel="preload" as="image" href="img/Klogo-32-red.ico" fetchpriority="high">
   </head>
 
   <body>
@@ -22,15 +22,16 @@
         }, 300);
       });
     </script>
-    <div class="splash-screen"> <img fetchpriority="high" class="splash-screen-logo" src="img/Klogo-512-red.png" ></img> </div>
+    <div class="splash-screen"> <img class="splash-screen-logo" src="img/Klogo-512-red.png" ></img> </div>
 
     <header>
-      <img src="img/Klogo-512-red.png" alt="kitty" class="photo">
+      <a href="#hide"><img src="img/Klogo-512-red.png" alt="kitty" class="photo"></a>
       <h1 class="title">Kompot_69</h1>
     </header>
 
     <div class="container">
- 
+      <a class="link" href="test" style="display: none;">test page</a>
+
       <p class="category">Проекты</p>
       <div class="link-container bots">
         <button class="link-container-button" onclick="content_show('bots')">Боты VK & Telegram</button>
@@ -44,7 +45,7 @@
       <div class="link-container hikka">
         <button class="link-container-button" onclick="content_show('hikka')">Модули для Hikka</button>
         <div class="link-container-content" id="hikka">
-          <a class="link-container-link" href="https://github.com/kompot69/Hikka-userbot-modules">Open GitHub repo</a>
+          <a class="link-container-link" href="https://github.com/kompot69/Hikka-userbot-modules" target="_blank">Open GitHub repo</a>
         </div>
       </div>
       <a class="link" href="minecraft">Сервера Minecraft</a>
@@ -52,7 +53,7 @@
       
       <p class="category" style="display: none;">Другое</p>
       <a class="link" href="https://kali-nh.github.io" target="_blank" style="display: none;">NetHunter For You Site</a>
-      <a class="link" href="#" target="_blank" style="display: none;">Hornishon</a>
+      <a class="link" href="#" style="display: none;">Hornishon</a>
       <div class="link-container old" style="display: none;">
         <button class="link-container-button" onclick="content_show('old')">старое говно</button>
         <div class="link-container-content">
@@ -77,22 +78,36 @@
       }
       document.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function(event) {
-          if (this.target === '_blank'||event.ctrlKey||event.metaKey) return; event.preventDefault();
-          document.querySelector('body').style.overflow='hidden';
-          document.querySelector('.link-container').style.overflow='visible';
-          document.querySelector('.link-container-content').style.overflow='visible';
-          link.style.height='20px';
-          link.style.width='200px';
-          link.style.position='absolute';
-          link.style.left='50%';
-          link.style.transition='all 500ms';
-          link.style.left='0%';
-          link.style.color='transparent';
-          link.style.height=window.innerHeight+'px';
-          link.style.width=window.innerWidth+'px';
-          link.style.backgroundColor='#141218';
-          link.style.transform='scale(2.1)';
-          setTimeout(() => { window.location.href = this.href; }, 350);
+          if (this.target === '_blank'||event.ctrlKey||event.metaKey) {
+            link.style.transform='scale(1.3)'
+            setTimeout(() => { link.style.removeProperty('transform'); return}, 500);}
+          else {
+            event.preventDefault();
+            document.querySelector('body').style.overflow='hidden';
+            document.querySelector('.link-container').style.overflow='visible';
+            document.querySelector('.link-container-content').style.overflow='visible';
+            link.style.backgroundColor='#141218';
+            link.style.color='transparent';
+            link.style.transform='scale('+window.innerHeight/10+')';
+            setTimeout(() => { window.location.href = this.href; }, 200);
+            // возврат
+            setTimeout(() => { 
+              link.style.opacity='0'; 
+              document.querySelector('.link-container').style.overflow='hidden';
+              document.querySelector('.link-container-content').style.overflow='hidden';
+            }, 1500);
+            setTimeout(() => { 
+              link.style.transition='all 100ms';
+              link.style.removeProperty('transform')
+              link.style.color='white';
+            }, 2000);
+            setTimeout(() => {
+              document.querySelector('body').style.removeProperty('overflow')
+              link.style.transition='all 500ms';
+              link.style.removeProperty('opacity')
+              link.style.removeProperty('background-color')
+            }, 2100);
+          }
         });
       });
       function content_show(id) {
