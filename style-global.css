@@ -4,6 +4,18 @@ body {
     margin: 0;
     font-family: "Comfortaa", cursive;
   }
+a { 
+  text-decoration:none; 
+  color:white; 
+  -webkit-tap-highlight-color: transparent;}
+button{ 
+  font-family:"Comfortaa",cursive; 
+  color:white; 
+  background-color:transparent; 
+  border:none; 
+  cursor:pointer; 
+  -webkit-tap-highlight-color: transparent;}
+  
 /* splash */
 .splash-screen {
     position: fixed;
