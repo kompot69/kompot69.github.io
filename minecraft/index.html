@@ -3,84 +3,100 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minecraft PE (Kompot69)</title>
+    <title>Minecraft</title>
     <link rel="shortcut icon" href="/img/logo.ico" type="image/jpg" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style-global.css" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet" />
   </head>
 
   <body>
+    <script defer> 
+      window.addEventListener('load', function() { 
+        const splash = document.querySelector('.splash-screen');
+        setTimeout(() => {
+          splash.classList.toggle('open'); splash.addEventListener('transitionend', function () { splash.remove(); });
+        }, 300);
+      });
+    </script>
+    <div class="splash-screen"> <img fetchpriority="high" class="splash-screen-logo" src="/img/Klogo-512-red.png" ></img> </div>
+
     <div class="container">
 
-      <a href="..">
-        <p id="red-filled-left" class="link-large">Назад</p>
-      </a>
+      <a class="link back" href="..">Назад</a>
 
-      <div class="server">
-        <div class="info">
-          <h4>Сервер 0 (основной)</h4>
-          <a href="#" class="v">1.21.51</a>
+      <div class="server-container">
+        <h4>Bedrock-сервер</h4>
+        <a href="https://t.me/minecraft_apk_free/329?single" class="link mini">v.1.21.51</a>
+        <div class="link-container mods1">
+          <button class="link-container-button" onclick="content_show('mods1')">Моды, установленные на сервере</button>
+          <div class="link-container-content">
+            <a class="link-container-link" href="https://webcodem-srbig.github.io/marketplace/actions-&-stuff/" >Actions & Stuff</a>
+            <a class="link-container-link" href="https://www.curseforge.com/minecraft-bedrock/addons/more-simple-structures-addon">More Simple Structures</a>
+            <a class="link-container-link" href="https://www.curseforge.com/minecraft-bedrock/addons/raiyons-glowing-ores">Raiyon's Glowing Ores</a>
+            <a class="link-container-link" href="https://mcpehub.org/mods/11755-fast-craft.html">Fast Craft</a>
+            <a class="link-container-link" href="https://mcpedl.com/crafting-tables/">Crafting Tables</a>
+            <a class="link-container-link" href="https://mcpedl.com/multi-ride-mod/">Multi-Ride Addon</a>
+            <a class="link-container-link" href="https://mcpehub.org/textures/11963-better-russian-font.html">Modern Furniture</a>
+            <a class="link-container-link" href="https://www.curseforge.com/minecraft-bedrock/addons/the-uncrafter">The Uncrafter</a>
+          </div>
         </div>
-        <a href="minecraft://?addExternalServer=Komposerv|94.241.199.12:19132">
-          <p class="open-minecraft-button">Добавить в игру</p>
-        </a>
+        <a class="link server-link" href="minecraft://?addExternalServer=Komposerv|178.44.62.10:19132">Добавить в игру</a>
       </div>
 
-      <div class="server">
-        
-        <div class="info">
-          <h4>Сервер 1 (с модами)</h4>
-          <a href="https://mcpehub.org/engine/dlfile.php?id=35865" class="v">1.20.50.03</a>
-        </div>
-      
-        <p>Моды, установленные на сервере:</p>
-
-      <a href="https://mcpehub.org/mods/3680-more-simple-structures.html">
-        <p class="mod-link">More Simple Structures</p>
-      </a>
-
-      <a href="https://mcpehub.org/mods/7641-modern-furniture-survival.html">
-        <p class="mod-link">Modern Furniture</p>
-      </a>
-
-      <a href="https://mcpehub.org/mods/6797-better-mob-animations.html">
-        <p class="mod-link">(?) Better Mob Animations</p>
-      </a>
-
-      <a href="https://mcpehub.org/mods/6035-raiyons-java-combat.html">
-        <p class="mod-link">Raiyons Java Combat</p>
-      </a>
-
-      <a href="https://mcpehub.org/mods/3520-mininghammers.html">
-        <p class="mod-link">MiningHammers</p>
-      </a>
-
-      <a href="https://mcpehub.org/mods/8417-backpack-plus.html">
-        <p class="mod-link">(?) Backpack Plus</p>
-      </a>
-
-      <a href="https://mcpehub.org/mods/11469-backpack-add-on.html">
-        <p class="mod-link">(?) BackPack Add-on</p>
-      </a>
-        
-      <a href="https://mcpehub.org/mods/9076-lumber-axe-addon-chop-trees-with-ease.html">
-        <p class="mod-link">Lumber Axe</p>
-      </a>
-
-      <a href="https://mcpehub.org/mods/7553-raiyons-dynamic-light.html">
-        <p class="mod-link">Raiyon's Dynamic Light</p>
-      </a>
-        
-      <a href="https://mcpehub.org/textures/11963-better-russian-font.html">
-        <p class="mod-link">(?) Better Russian Font</p>
-      </a>
-        
-      <a href="minecraft://?addExternalServer=kompot69_modded|mcpe.kompot69.ru:59504">
-        <p class="open-minecraft-button">Добавить в игру</p>
-      </a>
-        
-      </div>
             
     </div>
+    <script>
+    const splash_logo = document.querySelector('.splash-screen-logo');
+    let radius = 25; let radiusTo = 'up';
+    function shadow_animation() {
+      splash_logo.style.boxShadow = `0px 0px ${radius}px #6a1c30`;
+      if (radius >= 100) radiusTo = 'down'; 
+      else if (radius <= 0) radiusTo = 'up';
+      radius += (radiusTo === 'up') ? 1.5 : -1.5;
+      requestAnimationFrame(shadow_animation);
+    } shadow_animation();
+      document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(event) {
+          if (this.target === '_blank'||event.ctrlKey||event.metaKey) {
+            link.style.transform='scale(1.3)'
+            setTimeout(() => { link.style.removeProperty('transform'); return}, 500);}
+          else {
+            event.preventDefault();
+            document.querySelector('body').style.overflow='hidden';
+            document.querySelector('.link-container').style.overflow='visible';
+            document.querySelector('.link-container-content').style.overflow='visible';
+            link.style.backgroundColor='#141218';
+            link.style.color='transparent';
+            link.style.transform='scale('+window.innerHeight/10+')';
+            setTimeout(() => { window.location.href = this.href; }, 200);
+            // возврат
+            setTimeout(() => { 
+              link.style.opacity='0'; 
+              document.querySelector('.link-container').style.overflow='hidden';
+              document.querySelector('.link-container-content').style.overflow='hidden';
+            }, 1500);
+            setTimeout(() => { 
+              link.style.transition='all 100ms';
+              link.style.removeProperty('transform')
+              link.style.color='rgb(107, 194, 72)';
+            }, 2000);
+            setTimeout(() => {
+              document.querySelector('body').style.removeProperty('overflow')
+              link.style.transition='all 500ms';
+              link.style.removeProperty('opacity')
+              link.style.removeProperty('background-color')
+            }, 2100);
+          }
+        });
+      });
+      function content_show(id) {
+        const container = document.querySelector('.link-container.'+id);
+        container.classList.toggle('open');
+        container.querySelector('.link-container-content').classList.toggle('open');
+        container.querySelector('.link-container-button').classList.toggle('open');
+      }
+    </script>
   </body>
 </html>
