@@ -269,6 +269,17 @@
     </div>
   </div>  
   <script type="text/javascript">
+    
+    const splash_logo = document.querySelector('.splash-screen-logo');
+    let radius = 25; let radiusTo = 'up';
+    function shadow_animation() {
+      splash_logo.style.boxShadow = `0px 0px ${radius}px #6a1c30`;
+      if (radius >= 100) radiusTo = 'down'; 
+      else if (radius <= 0) radiusTo = 'up';
+      radius += (radiusTo === 'up') ? 1.5 : -1.5;
+      requestAnimationFrame(shadow_animation);
+    } shadow_animation();
+      
     var slides1 = document.querySelectorAll('#dialog-messages-user .dialog-message-user');
     var slides2 = document.querySelectorAll('#dialog-messages-bot .dialog-message-bot');
 
