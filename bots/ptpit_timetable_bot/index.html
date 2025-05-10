@@ -7,10 +7,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet" />
   <title>Расписание ПТПИТ (бот)</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style-global.css" />
   <link rel="shortcut icon" href="./img/logo.ico" type="image/jpg" />
 </head>
 
 <body>
+    <script defer> 
+      window.addEventListener('load', function() { 
+        const splash = document.querySelector('.splash-screen');
+        setTimeout(() => {
+          splash.classList.toggle('open'); splash.addEventListener('transitionend', function () { splash.remove(); });
+        }, 300);
+      });
+    </script>
+    <div class="splash-screen"> <img class="splash-screen-logo" src="/img/Klogo-512-red.png" ></img> </div>
+
   <header class="header">
     <div class="header-left">
       <img src="./img/logo.ico" alt="logo" class="logo" />
