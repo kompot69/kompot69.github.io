@@ -34,10 +34,12 @@ button{ font-family:"Comfortaa",cursive; color:white; background-color:transpare
 .link:hover,.link-container-button:hover,.link-container-link:hover {
     background-color: #36343b;
     box-shadow: rgb(77, 77, 77) 0px 0px 25px;
+    border-radius: 15px;
 }
-.link-container:hover { box-shadow: rgb(77, 77, 77) 0px 0px 25px; }
+.link-container:hover { box-shadow: rgb(77, 77, 77) 0px 0px 25px; border-radius: 15px;}
 .link-container.open:hover { box-shadow: rgba(77, 77, 77, 0.4) 0px 0px 25px; }
-.link-container-button.open { background-color: #ffffff44; font-weight: 600;}
+.link-container-button.open { background-color: #ffffff44; font-weight: 600; border-radius: 15px;}
+.link-container:hover:not(.open) .link-container-content {max-height:7px;}
 
 /* ссылки (не в контейнерах) (+ кнопки контейнера) */
 .link, .link-container{
@@ -78,6 +80,7 @@ button{ font-family:"Comfortaa",cursive; color:white; background-color:transpare
     max-height: 0;
     -webkit-transition: all 500ms;
     transition: all 500ms;
+    border-radius: 15px;
 }
 
 
