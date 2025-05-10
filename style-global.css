@@ -26,7 +26,10 @@ body {
     background-size: contain;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    animation: fadeIn 0.75s ease forwards;
+    animation: fadeIn 0.75s ease forwards;    
+    box-shadow: 0 0 25px #6a1c30;
+    -webkit-transition: all 100ms;
+    transition: all 100ms;
   }
 @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
 .splash-screen.open { 
