@@ -7,10 +7,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap" rel="stylesheet" />
   <title>Расписание ПТПИТ (бот)</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style-global.css" />
   <link rel="shortcut icon" href="../img/logo.ico" type="image/jpg" />
 </head>
 
 <body>
+    <script defer> 
+      window.addEventListener('load', function() { 
+        const splash = document.querySelector('.splash-screen');
+        setTimeout(() => {
+          splash.classList.toggle('open'); splash.addEventListener('transitionend', function () { splash.remove(); });
+        }, 300);
+      });
+    </script>
+    <div class="splash-screen"> <img fetchpriority="high" class="splash-screen-logo" src="/img/Klogo-512-red.png" ></img> </div>
+
   <header class="header">
     <div class="header-left">
       <img src="../img/logo.ico" alt="logo" class="logo" />
@@ -233,6 +244,16 @@
   </div>
   </div>
   <script type="text/javascript">
+    const splash_logo = document.querySelector('.splash-screen-logo');
+    let radius = 25; let radiusTo = 'up';
+    function shadow_animation() {
+      splash_logo.style.boxShadow = `0px 0px ${radius}px #6a1c30`;
+      if (radius >= 100) radiusTo = 'down'; 
+      else if (radius <= 0) radiusTo = 'up';
+      radius += (radiusTo === 'up') ? 1.5 : -1.5;
+      requestAnimationFrame(shadow_animation);
+    } shadow_animation();
+      
   document.getElementById("defaultOpen").click();
   function openTab(evt, TabName) {
     var i, tabcontent, tablinks;
