@@ -23,7 +23,7 @@ header{
 .container{
     padding: 20px;
     margin: auto;
-    max-width: 500px; 
+    max-width: 400px; 
 }
 a{ text-decoration:none; color:white; -webkit-tap-highlight-color: transparent;}
 button{ font-family:"Comfortaa",cursive; color:white; background-color:transparent; border:none; cursor:pointer; -webkit-tap-highlight-color: transparent;}
@@ -46,6 +46,8 @@ button{ font-family:"Comfortaa",cursive; color:white; background-color:transpare
 .splash-screen-logo {
     width: 10rem;
     background-color: #6a1c30;
+    background-image: url(img/Klogo-32-red.ico);
+    background-size: contain;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     animation: fadeIn 0.75s ease forwards;
@@ -99,6 +101,7 @@ button{ font-family:"Comfortaa",cursive; color:white; background-color:transpare
 }
 
 /* контейнеры ссылок */
+/* .link-container:hover .link-container-content {max-height: 5px;} */
 .link-container.open {border-radius: 15px;}
 .link-container-content.open {max-height: 200px;}
 .link-container-button {
