@@ -1,94 +1,61 @@
-header{
-    text-align: center;
-}
-.title{
-    color: rgb(255, 255, 255);
-    opacity: 90%;
-    margin: 0;
-}
-.photo{
-    margin-top: 20px;
-    border-radius: 55px;
-    height: 100px;
-    width: 100px;
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
-}
+
 .container{
+    border: 1px solid rgba(150, 0, 0, 0);
     padding: 20px;
     margin: auto;
-    max-width: 400px; 
+    max-width: 500px;
 }
-a{ text-decoration:none; color:white; -webkit-tap-highlight-color: transparent;}
-button{ font-family:"Comfortaa",cursive; color:white; background-color:transparent; border:none; cursor:pointer; -webkit-tap-highlight-color: transparent;}
-
-.category{
-    color: rgb(255, 255, 255);
-    font-weight: 600;
+.link-container{
+    max-width: 320px;
+    margin: 20px auto;
+}
+.link-container.open{
+    max-width: 370px;
+}
+.link-container-link:hover{
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    background-image:url(/img/new_tab.svg);
+}
+.back{
+    font-weight: 200;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    background-image:url(/img/arrow_left.svg);
+}
+.server-container{
     text-align: center;
-    margin-bottom: 0;
-    margin-top: 30px;
-}
-
-/* акцент наводки */
-.link:hover,.link-container-button:hover,.link-container-link:hover {
-    background-color: #36343b;
-    box-shadow: rgb(77, 77, 77) 0px 0px 25px;
+    padding: 5px;
+    border: 1px solid rgb(77, 77, 77);
     border-radius: 15px;
+    margin-top: 25px;
 }
-.link-container:hover { box-shadow: rgb(77, 77, 77) 0px 0px 25px; border-radius: 15px;}
-.link-container.open:hover { box-shadow: rgba(77, 77, 77, 0.4) 0px 0px 25px; }
-.link-container-button.open { background-color: #ffffff44; font-weight: 600; border-radius: 15px;}
-.link-container:hover:not(.open) .link-container-content {max-height:7px;}
-
-/* ссылки (не в контейнерах) (+ кнопки контейнера) */
-.link, .link-container{
-    margin: 10px auto;
-    border: 1px solid #ccc;
+.v::before{ content: "v. "; }
+.v{
+    margin: 20px auto;
+    height: 15px;
+    padding: 5px 12px;
+    border: 1px solid rgb(77, 77, 77);
     border-radius: 20px;
-    overflow:hidden;
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
+    font-size: 14px;
 }
-/* ссылки (не в контейнерах) (+ ссылки контейнера)  */
-.link, .link-container-link {
-    display: block;
-    padding: 10px;
-    height: 18px;
-    text-align: center;
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
+.server-link{
+    color: rgb(107, 194, 72);
+    font-weight: 900;
+    border: 1px solid rgb(107, 194, 72);
+    background-size: contain;
+    background-image:url(/img/minecraft-grass.jpg);
+    background-position: center;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    max-width: 220px;
 }
-.contact{
-    border: 1px solid #909090;
-    max-width: fit-content;
-}
-
-/* контейнеры ссылок */
-/* .link-container:hover .link-container-content {max-height: 5px;} */
-.link-container.open {border-radius: 15px;}
-.link-container-content.open {max-height: 200px;}
-.link-container-button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
-}
-.link-container-content {
-    overflow: hidden;
-    max-height: 0;
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
-    border-radius: 15px;
-}
-
-
-/* АААААААААААААААААААААА ПААРАША ГОВНОКОД АХТУГ АХТУНГ ГИТЛЕР КАПУТ БЛТЯЬ */
-#gray-right{
-    background-image:linear-gradient(
-    to left,
-    rgba(42, 42, 44, 0.5) ,
-    rgb(42, 42, 44) 23%),  
-    url(/img/arrow_right.svg);
+.server-link:hover{
+    box-shadow: rgb(107, 194, 72) 0px 0px 20px;
+    text-shadow: rgb(107, 194, 72) 0px 0px 20px;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    max-width: 250px;
 }
