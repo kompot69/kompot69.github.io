@@ -48,8 +48,8 @@
           else {
             event.preventDefault();
             document.querySelector('body').style.overflow='hidden';
-            document.querySelector('.link-container').style.overflow='visible';
-            document.querySelector('.link-container-content').style.overflow='visible';
+            //document.querySelector('.link-container').style.overflow='visible';
+            //document.querySelector('.link-container-content').style.overflow='visible';
             link.style.backgroundColor='#141218';
             link.style.color='transparent';
             link.style.transform='scale('+window.innerHeight/10+')';
@@ -57,8 +57,8 @@
             // возврат
             setTimeout(() => { 
               link.style.opacity='0'; 
-              document.querySelector('.link-container').style.overflow='hidden';
-              document.querySelector('.link-container-content').style.overflow='hidden';
+              //document.querySelector('.link-container').style.overflow='hidden';
+              //document.querySelector('.link-container-content').style.overflow='hidden';
             }, 1500);
             setTimeout(() => { 
               link.style.transition='all 100ms';
@@ -75,7 +75,7 @@
         });
       });
       function content_show(id) {
-        const container = document.querySelector('.link-container.'+id);
+        const container = None //document.querySelector('.link-container.'+id);
         container.classList.toggle('open');
         container.querySelector('.link-container-content').classList.toggle('open');
         container.querySelector('.link-container-button').classList.toggle('open');
