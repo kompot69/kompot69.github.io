@@ -3,18 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>блин...</title>
+    <title>Зеркало ВК—ТГ (бот)</title>
     <link rel="shortcut icon" href="/img/logo.ico" type="image/jpg" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style-global.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet" />
   </head>
 
-  <body style="background-color: rgb(34, 34, 34); color: white;">
-    <h1>Потом сайт сделаю...</h1>
-    <a href="https://vk.me/messages_mirror_bot">Бот в ВК</a>
-    <br>
-    <a href="https://t.me/messages_mirror_bot">Бот в Tg</a>
-    <br>
-    <a href="..">Назад</a>
-    <br>
-    <a href="/">На главную</a>
+  <body>
+    <script defer> 
+      window.addEventListener('load', function() { 
+        const splash = document.querySelector('.splash-screen');
+        setTimeout(() => {
+          splash.classList.toggle('open'); splash.addEventListener('transitionend', function () { splash.remove(); });
+        }, 300);
+      });
+    </script>
+    <div class="splash-screen"> <img fetchpriority="high" class="splash-screen-logo" src="/img/Klogo-512-red.png" ></img> </div>
+
+    <div class="container">
+
+      <a class="link back" href="..">Назад</a>
+<a class="link back" href="">Назад</a>
+      <a class="link back" href="https://vk.me/messages_mirror_bot">Назад</a>
+      
+            
+    </div>
+    <script>
+    const splash_logo = document.querySelector('.splash-screen-logo');
+    let radius = 25; let radiusTo = 'up';
+    function shadow_animation() {
+      splash_logo.style.boxShadow = `0px 0px ${radius}px #6a1c30`;
+      if (radius >= 100) radiusTo = 'down'; 
+      else if (radius <= 0) radiusTo = 'up';
+      radius += (radiusTo === 'up') ? 1.5 : -1.5;
+      requestAnimationFrame(shadow_animation);
+    } shadow_animation();
+      document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(event) {
+          if (this.target === '_blank'||event.ctrlKey||event.metaKey) {
+            link.style.transform='scale(1.3)'
+            setTimeout(() => { link.style.removeProperty('transform'); return}, 500);}
+          else {
+            event.preventDefault();
+            document.querySelector('body').style.overflow='hidden';
+            document.querySelector('.link-container').style.overflow='visible';
+            document.querySelector('.link-container-content').style.overflow='visible';
+            link.style.backgroundColor='#141218';
+            link.style.color='transparent';
+            link.style.transform='scale('+window.innerHeight/10+')';
+            setTimeout(() => { window.location.href = this.href; }, 200);
+            // возврат
+            setTimeout(() => { 
+              link.style.opacity='0'; 
+              document.querySelector('.link-container').style.overflow='hidden';
+              document.querySelector('.link-container-content').style.overflow='hidden';
+            }, 1500);
+            setTimeout(() => { 
+              link.style.transition='all 100ms';
+              link.style.removeProperty('transform')
+              link.style.color='rgb(107, 194, 72)';
+            }, 2000);
+            setTimeout(() => {
+              document.querySelector('body').style.removeProperty('overflow')
+              link.style.transition='all 500ms';
+              link.style.removeProperty('opacity')
+              link.style.removeProperty('background-color')
+            }, 2100);
+          }
+        });
+      });
+      function content_show(id) {
+        const container = document.querySelector('.link-container.'+id);
+        container.classList.toggle('open');
+        container.querySelector('.link-container-content').classList.toggle('open');
+        container.querySelector('.link-container-button').classList.toggle('open');
+      }
+    </script>
   </body>
 </html>
