@@ -38,7 +38,7 @@ header{
 .link-container-button.open { background-color: #ffffff44; font-weight: 600; border-radius: 15px;}
 .link-container:hover:not(.open) .link-container-content {max-height:7px;}
 
-/* ссылки (не в контейнерах) (+ кнопки контейнера) */
+/* ссылки (+ КНОПКИ контейнера) */
 .link, .link-container{
     margin: 10px auto;
     border: 1px solid #ccc;
@@ -47,8 +47,12 @@ header{
     -webkit-transition: all 500ms;
     transition: all 500ms;
 }
-/* ссылки (не в контейнерах) (+ ссылки контейнера)  */
+/* ссылки (+ ССЫЛКИ контейнера)  */
 .link, .link-container-link {
+    /*background-image: url(/img/top_right.svg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) center;*/
     display: block;
     padding: 10px;
     height: 18px;
@@ -57,6 +61,7 @@ header{
     transition: all 500ms;
 }
 .contact{
+    background-image: none;
     border: 1px solid #909090;
     max-width: fit-content;
 }
